@@ -1,7 +1,7 @@
 export const API_BASE =
   typeof window !== 'undefined'
     ? '/api'
-    : (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5002/api');
+    : (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api');
 
 export function getGuestId(): string {
   if (typeof window === 'undefined') return '';

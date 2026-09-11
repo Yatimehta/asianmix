@@ -19,8 +19,18 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
+const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:3000,http://localhost:3001,https://asianmix.ie,https://www.asianmix.ie')
+  .split(',')
+  .map(url => url.trim());
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes('*') || origin.endsWith('.asianmix.ie')) {
+      callback(null, true);
+    } else {
+      callback(null, true);
+    }
+  },
   credentials: true,
 }));
 app.use(express.json());
