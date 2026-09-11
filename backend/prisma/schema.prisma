@@ -1,0 +1,176 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String         @id @default(uuid())
+  email        String         @unique
+  name         String
+  passwordHash String
+  role         String         @default("CUSTOMER") // "CUSTOMER" | "ADMIN"
+  phone        String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  addresses    Address[]
+  orders       Order[]
+  reviews      Review[]
+  cart         Cart?
+  wishlist     WishlistItem[]
+}
+
+model Address {
+  id           String   @id @default(uuid())
+  userId       String
+  fullName     String
+  addressLine1 String
+  addressLine2 String?
+  city         String
+  county       String   // Dublin, Cork, Galway, Limerick, etc.
+  eircode      String
+  country      String   @default("Ireland")
+  phone        String?
+  isDefault    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Category {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  slug        String    @unique
+  description String?
+  image       String?
+  icon        String?
+  orderIndex  Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  products    Product[]
+}
+
+model Product {
+  id             String         @id @default(uuid())
+  name           String
+  slug           String         @unique
+  description    String
+  ingredients    String?
+  originCountry  String         @default("Asia") // Japan, Korea, Thailand, India, China, Vietnam, Philippines
+  brand          String?
+  price          Float
+  compareAtPrice Float?
+  stock          Int            @default(100)
+  sku            String?
+  images         String         // JSON string array of URLs
+  weight         String?        // e.g. "500g", "1kg", "250ml"
+  unit           String?        // "pack", "bottle", "bag", "box"
+  dietaryTags    String?        // Comma separated: "Vegan,Gluten-Free,Halal,Vegetarian"
+  isFeatured     Boolean        @default(false)
+  isBestSeller   Boolean        @default(false)
+  isNewArrival   Boolean        @default(false)
+  categoryId     String
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  category       Category       @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  orderItems     OrderItem[]
+  reviews        Review[]
+  cartItems      CartItem[]
+  wishlistItems  WishlistItem[]
+}
+
+model Order {
+  id              String      @id @default(uuid())
+  orderNumber     String      @unique
+  userId          String?
+  guestEmail      String?
+  guestName       String?
+  guestPhone      String?
+  status          String      @default("PENDING") // PENDING, PROCESSING, SHIPPED, DELIVERED, CANCELLED
+  subtotal        Float
+  shippingFee     Float       @default(5.99)
+  discount        Float       @default(0.0)
+  totalAmount     Float
+  shippingAddress String      // JSON stringified address details
+  deliveryMethod  String      @default("STANDARD_IRELAND") // STANDARD_IRELAND, EXPRESS_CORK, EXPRESS_DUBLIN
+  paymentStatus   String      @default("PENDING") // PENDING, PAID, FAILED
+  paymentMethod   String      @default("STRIPE") // STRIPE, CARD, CASH_ON_PICKUP
+  notes           String?
+  trackingNumber  String?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  user            User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
+  items           OrderItem[]
+}
+
+model OrderItem {
+  id           String   @id @default(uuid())
+  orderId      String
+  productId    String?
+  productName  String
+  productImage String?
+  price        Float
+  quantity     Int
+  subtotal     Float
+
+  order        Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product      Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+}
+
+model Review {
+  id                 String   @id @default(uuid())
+  productId          String
+  userId             String
+  userName           String
+  rating             Int      @default(5)
+  title              String?
+  comment            String
+  isVerifiedPurchase Boolean  @default(true)
+  createdAt          DateTime @default(now())
+
+  product            Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Cart {
+  id        String     @id @default(uuid())
+  userId    String?    @unique
+  guestId   String?    @unique
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  user      User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items     CartItem[]
+}
+
+model CartItem {
+  id        String   @id @default(uuid())
+  cartId    String
+  productId String
+  quantity  Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+model WishlistItem {
+  id        String   @id @default(uuid())
+  userId    String
+  productId String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+}

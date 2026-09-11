@@ -1,0 +1,1318 @@
+{
+  "biriyani-essential": [
+    {
+      "id": 7232476512440,
+      "title": "Basmati Rice Premium (India Gate)"
+    },
+    {
+      "id": 6768948838584,
+      "title": "Basmati Rice (Chefs Choice)"
+    },
+    {
+      "id": 8754543427930,
+      "title": "Pineapple essence (heera)"
+    },
+    {
+      "id": 8690929205594,
+      "title": "Butter Ghee (East End)"
+    },
+    {
+      "id": 7076248977592,
+      "title": "Rose Water (East End) 190 ML"
+    },
+    {
+      "id": 8754546180442,
+      "title": "Biryani essence (heera)"
+    },
+    {
+      "id": 6765883326648,
+      "title": "Biriyani Masala (Shan) 60G"
+    },
+    {
+      "id": 6767028240568,
+      "title": "Bay Leaf (East End)40Gm"
+    }
+  ],
+  "beans": [
+    {
+      "id": 7268463771832,
+      "title": "Yellow Gram (East End)"
+    },
+    {
+      "id": 7268167057592,
+      "title": "Green Gram (Mayil)"
+    },
+    {
+      "id": 6767027093688,
+      "title": "Moong Whole Beans (East End)"
+    },
+    {
+      "id": 7268461052088,
+      "title": "Black Matpe Bean (East End)"
+    },
+    {
+      "id": 6778194591928,
+      "title": "Split Black Matpe Beans Huskless (East End)"
+    },
+    {
+      "id": 6778194526392,
+      "title": "Split Yellow Gram (East End)"
+    },
+    {
+      "id": 6767027388600,
+      "title": "Split Pigeon Peas (East End)"
+    },
+    {
+      "id": 6767027323064,
+      "title": "Split Moong Beans (East End)"
+    },
+    {
+      "id": 6767026634936,
+      "title": "Split Mung Beans Huskles (East End)"
+    },
+    {
+      "id": 8594738053466,
+      "title": "Brown Lentils (East End)"
+    },
+    {
+      "id": 7278286045368,
+      "title": "Red Cow Peas (Grand)"
+    },
+    {
+      "id": 7268445978808,
+      "title": "Brown Chowri (Heera)"
+    },
+    {
+      "id": 7268442931384,
+      "title": "Red Cow Peas(Mayil)"
+    },
+    {
+      "id": 7268441325752,
+      "title": "Green Peas (Mayil)"
+    },
+    {
+      "id": 7268458692792,
+      "title": "Dark Red Kidney Beans(East End)"
+    },
+    {
+      "id": 7268456300728,
+      "title": "Black Eye Beans (East End)"
+    }
+  ],
+  "classic-collection-and-over-the-counter": [
+    {
+      "id": 6777008619704,
+      "title": "Coconut Milk (Chaokoh)"
+    },
+    {
+      "id": 6871883153592,
+      "title": "Tomato Ketchup (Maggi)"
+    },
+    {
+      "id": 6777870647480,
+      "title": "Masala Noodles (Maggi)"
+    },
+    {
+      "id": 6870370975928,
+      "title": "Coconut Milk Powder (Maggi)"
+    },
+    {
+      "id": 6778097893560,
+      "title": "Milo (Nestle)"
+    },
+    {
+      "id": 6768949297336,
+      "title": "Vatika Henna Hair Colour"
+    },
+    {
+      "id": 8754774901082,
+      "title": "Natural care (red label)"
+    },
+    {
+      "id": 8750685880666,
+      "title": "Instant Cardamom Tea (Nestle)"
+    },
+    {
+      "id": 6777870745784,
+      "title": "Red Label Tea (Brooke Bond) 500G"
+    },
+    {
+      "id": 6777870057656,
+      "title": "Horlicks"
+    },
+    {
+      "id": 6777869959352,
+      "title": "Bournvita"
+    },
+    {
+      "id": 6777870024888,
+      "title": "Boost"
+    },
+    {
+      "id": 8740258283866,
+      "title": "Amrutanjan"
+    },
+    {
+      "id": 6768949559480,
+      "title": "Amla Hair Oil (Dabur)"
+    }
+  ],
+  "drinks": [
+    {
+      "id": 8790574858586,
+      "title": "Chaunsa mango (nestle)"
+    },
+    {
+      "id": 8790571385178,
+      "title": "Royal mango (nestle)"
+    },
+    {
+      "id": 8790387392858,
+      "title": "Passion fruit (mayil)"
+    },
+    {
+      "id": 8790355575130,
+      "title": "Pineapple squash (mayil)"
+    },
+    {
+      "id": 8790342795610,
+      "title": "Mango squash (mayil)"
+    },
+    {
+      "id": 8790328344922,
+      "title": "Fruita vitals guava (nestle)"
+    },
+    {
+      "id": 8790317564250,
+      "title": "Nesfruta (nestle)"
+    },
+    {
+      "id": 8763363197274,
+      "title": "Coconut juice (mogu mogu)"
+    },
+    {
+      "id": 8763347173722,
+      "title": "Strawberry juice (mogu mogu)"
+    },
+    {
+      "id": 8763333181786,
+      "title": "Watermelon juice (mogu mogu)"
+    },
+    {
+      "id": 8763323810138,
+      "title": "Melon juice (mogu mogu)"
+    },
+    {
+      "id": 8763321811290,
+      "title": "Lychee juice (mogu mogu)"
+    },
+    {
+      "id": 8763316699482,
+      "title": "Passion fruit juice (mogu mogu)"
+    },
+    {
+      "id": 8763307393370,
+      "title": "Mango juice (mogu mogu)"
+    },
+    {
+      "id": 8754605490522,
+      "title": "Fruita vitals mango (nestle)"
+    },
+    {
+      "id": 8754603655514,
+      "title": "Fruita vitals guava (nestle)"
+    },
+    {
+      "id": 8754601165146,
+      "title": "Fruita vitals (nestle)"
+    },
+    {
+      "id": 8750907654490,
+      "title": "mango (frooti)"
+    },
+    {
+      "id": 8750828880218,
+      "title": "Orange juice (enjoy)"
+    },
+    {
+      "id": 8750814134618,
+      "title": "Pomegranate (maaza)"
+    },
+    {
+      "id": 8750782153050,
+      "title": "Thumps up (cola)"
+    },
+    {
+      "id": 8750776811866,
+      "title": "Energy drink (red bull)"
+    },
+    {
+      "id": 8750772388186,
+      "title": "Limca (cola)"
+    },
+    {
+      "id": 8750770258266,
+      "title": "Fanta (cola)"
+    },
+    {
+      "id": 8750764097882,
+      "title": "Mango (maaza)"
+    },
+    {
+      "id": 8750756200794,
+      "title": "Guava (maaza)"
+    },
+    {
+      "id": 8750652162394,
+      "title": "Cola (coca cola)"
+    },
+    {
+      "id": 6871885119672,
+      "title": "Vita Malt Classic"
+    },
+    {
+      "id": 6768949821624,
+      "title": "Pineapple Juice (Gina) 240Ml"
+    }
+  ],
+  "fresh-and-frozen-vegetables": [
+    {
+      "id": 6777058918584,
+      "title": "Green Chilli"
+    },
+    {
+      "id": 8691341885786,
+      "title": "Chena (Yam Suran)"
+    },
+    {
+      "id": 8691338510682,
+      "title": "Chembu large (Arvi)"
+    },
+    {
+      "id": 8636235022682,
+      "title": "Plumpkin"
+    },
+    {
+      "id": 8636231418202,
+      "title": "Vellari"
+    },
+    {
+      "id": 8636225618266,
+      "title": "Drumstick"
+    },
+    {
+      "id": 8566953705818,
+      "title": "Tindoori/ Kovakka"
+    },
+    {
+      "id": 6777059180728,
+      "title": "Long Beans"
+    },
+    {
+      "id": 6777059147960,
+      "title": "Bitter Gourd (Kerala)"
+    },
+    {
+      "id": 6777059115192,
+      "title": "Okra"
+    },
+    {
+      "id": 6777059049656,
+      "title": "Coriander Leaves"
+    },
+    {
+      "id": 6777058984120,
+      "title": "Curry Leaves"
+    },
+    {
+      "id": 6777058853048,
+      "title": "Shallot"
+    }
+  ],
+  "ghee-oil-and-payasam-product": [
+    {
+      "id": 6768950149304,
+      "title": "Ground nut oil (Idhayam)"
+    },
+    {
+      "id": 6768949461176,
+      "title": "Coconut Oil (Vatika) 200Ml"
+    },
+    {
+      "id": 7080436236472,
+      "title": "Coconut Oil (Parachute)"
+    },
+    {
+      "id": 7268159160504,
+      "title": "Coconut oil (Mayil)"
+    },
+    {
+      "id": 8667499102554,
+      "title": "Coconut oil (Kera)"
+    },
+    {
+      "id": 6768949559480,
+      "title": "Amla Hair Oil (Dabur)"
+    },
+    {
+      "id": 6768949493944,
+      "title": "Almond Oil (KTC) 200ML"
+    },
+    {
+      "id": 8798400086362,
+      "title": "Ghee (east end)"
+    },
+    {
+      "id": 8667501953370,
+      "title": "Cow ghee (Patanjali)"
+    },
+    {
+      "id": 6778882031800,
+      "title": "Palada payasam Mix (Brahmins) 200g"
+    },
+    {
+      "id": 6778194133176,
+      "title": "Palm Jaggery (Mayil)"
+    },
+    {
+      "id": 6870136389816,
+      "title": "Jaggery Powder (Mayil)"
+    },
+    {
+      "id": 6778194297016,
+      "title": "Jaggery Goor (East End)"
+    },
+    {
+      "id": 7268160110776,
+      "title": "Jaggery ball (Mayil)"
+    },
+    {
+      "id": 7268160503992,
+      "title": "Jaggery (Periyar)"
+    },
+    {
+      "id": 6870370975928,
+      "title": "Coconut Milk Powder (Maggi)"
+    },
+    {
+      "id": 6778881671352,
+      "title": "Semiya Payasam Mix (Vermicelli Desert Mix) (Brahmins) 200g"
+    },
+    {
+      "id": 8667501035866,
+      "title": "Butter Ghee (Khanum)"
+    },
+    {
+      "id": 8690929205594,
+      "title": "Butter Ghee (East End)"
+    }
+  ],
+  "maggi-products": [
+    {
+      "id": 6871883153592,
+      "title": "Tomato Ketchup (Maggi)"
+    },
+    {
+      "id": 6870370975928,
+      "title": "Coconut Milk Powder (Maggi)"
+    },
+    {
+      "id": 6777870647480,
+      "title": "Masala Noodles (Maggi)"
+    }
+  ],
+  "nuts-and-dates": [
+    {
+      "id": 8804784210266,
+      "title": "Dates (madinahdelight)"
+    }
+  ],
+  "personal-care-products": [
+    {
+      "id": 8740263592282,
+      "title": "Zandu Balm"
+    },
+    {
+      "id": 8740258283866,
+      "title": "Amrutanjan"
+    },
+    {
+      "id": 7082477027512,
+      "title": "Medimix"
+    },
+    {
+      "id": 7082404151480,
+      "title": "Lifebuoy"
+    },
+    {
+      "id": 7082398679224,
+      "title": "Pears Soft and fresh"
+    },
+    {
+      "id": 7081864593592,
+      "title": "Chandrika"
+    },
+    {
+      "id": 7080436236472,
+      "title": "Coconut Oil (Parachute)"
+    },
+    {
+      "id": 7076250943672,
+      "title": "Lux Velvet Glow"
+    },
+    {
+      "id": 7076248486072,
+      "title": "Lux Rose Glow"
+    },
+    {
+      "id": 6768949559480,
+      "title": "Amla Hair Oil (Dabur)"
+    },
+    {
+      "id": 6768949493944,
+      "title": "Almond Oil (KTC) 200ML"
+    },
+    {
+      "id": 6768949461176,
+      "title": "Coconut Oil (Vatika) 200Ml"
+    },
+    {
+      "id": 6768949395640,
+      "title": "Pears"
+    },
+    {
+      "id": 6768949362872,
+      "title": "Mysore Sandal Soap"
+    },
+    {
+      "id": 6768949297336,
+      "title": "Vatika Henna Hair Colour"
+    }
+  ],
+  "phillipino-product-snacks": [
+    {
+      "id": 6777008685240,
+      "title": "Banana Sauce (Tamis Anghang)(Ufc) 550G"
+    },
+    {
+      "id": 6871883874488,
+      "title": "All Purpose Sauce(Mang Tomas) 454g"
+    },
+    {
+      "id": 6777007833272,
+      "title": "Ajinomoto 250G"
+    },
+    {
+      "id": 6781387014328,
+      "title": "Clover Chips(Cheesier corn snack)(Leslies)"
+    }
+  ],
+  "pickles-and-paste": [
+    {
+      "id": 10502222315866,
+      "title": "GINGER GARLIC PASTE 300gm (MAYIL)"
+    },
+    {
+      "id": 10502220939610,
+      "title": "KERA GINGER GARLIC PASTE 300gm"
+    },
+    {
+      "id": 10502220382554,
+      "title": "KERA GINGER GARLIC PASTE 1KG"
+    },
+    {
+      "id": 8806100631898,
+      "title": "Ginger garlic paste (mayil)"
+    },
+    {
+      "id": 8739740418394,
+      "title": "Hot and Sweet Lime, Dates Pickle (Saras)"
+    },
+    {
+      "id": 8739733995866,
+      "title": "Mixed Pickle (Mothers)"
+    },
+    {
+      "id": 8739728589146,
+      "title": "Onion Pickle (Priya)"
+    },
+    {
+      "id": 8668274950490,
+      "title": "Cut Mango Pickle (Mayil)"
+    },
+    {
+      "id": 7268159357112,
+      "title": "Mango Pickle mild (Mothers)"
+    },
+    {
+      "id": 7268158374072,
+      "title": "Lime Pickle (Brahmins)"
+    },
+    {
+      "id": 7055485173944,
+      "title": "Cut Mango Pickle (Mothers)"
+    },
+    {
+      "id": 7055260713144,
+      "title": "Kanthari Mango Chutney (Mayil)"
+    },
+    {
+      "id": 7055228600504,
+      "title": "Coconut Chutney Powder (Kitchen Treasures) 200G"
+    },
+    {
+      "id": 7055139176632,
+      "title": "Garlic Paste (Shan) 310g"
+    },
+    {
+      "id": 7055127281848,
+      "title": "Ginger Garlic Paste (Shan) 700g"
+    },
+    {
+      "id": 7055116075192,
+      "title": "Ginger Garlic Paste (Priya)"
+    },
+    {
+      "id": 7055113912504,
+      "title": "Ginger Garlic Paste (Priya) 300g"
+    },
+    {
+      "id": 6870136946872,
+      "title": "Cut Mango Pickle (Grandmas)"
+    },
+    {
+      "id": 6870136914104,
+      "title": "Kaduku Mango Pickle (Grandmas)"
+    },
+    {
+      "id": 6870136848568,
+      "title": "Uluva Nellicka (Mayil)"
+    },
+    {
+      "id": 6870136815800,
+      "title": "Garlic Pickle (Mayil)"
+    },
+    {
+      "id": 6870136651960,
+      "title": "Mixed Vegetable Pickle (Kitchen Treasures)"
+    },
+    {
+      "id": 6870136488120,
+      "title": "Nellikka Kanthari Chutney (Mayil)"
+    },
+    {
+      "id": 6870136422584,
+      "title": "Kanthari in Brine (Mayil)"
+    },
+    {
+      "id": 6767031648440,
+      "title": "White Lemon Pickle (Mayil)"
+    },
+    {
+      "id": 6767031582904,
+      "title": "Kaduku Mango (Mayil)"
+    },
+    {
+      "id": 6767031484600,
+      "title": "Lemon Pickle (Mayil)"
+    },
+    {
+      "id": 6767031451832,
+      "title": "Fish Pickle (Periyar)"
+    },
+    {
+      "id": 6767031386296,
+      "title": "Lime Pickle Mild (Mothers)"
+    },
+    {
+      "id": 6767031222456,
+      "title": "Lime Pickle Hot & Sweet (Grandmas)"
+    },
+    {
+      "id": 6767031124152,
+      "title": "Sweet Mango Chutney (Priya) 340Gm"
+    }
+  ],
+  "rice-and-grains": [
+    {
+      "id": 6768982982840,
+      "title": "Matta Rice (Pavizham) 10 Kg"
+    },
+    {
+      "id": 8627900678490,
+      "title": "Basmati Rice (Daawat)"
+    },
+    {
+      "id": 7043519676600,
+      "title": "Whole Wheat Flour (Aashirvaad)"
+    },
+    {
+      "id": 6870137438392,
+      "title": "Matta Rice (Mayil)"
+    },
+    {
+      "id": 6870137471160,
+      "title": "Matta Rice (Double Horse) 10Kg"
+    },
+    {
+      "id": 6759879835832,
+      "title": "Jaya Rice (Nirmal)"
+    },
+    {
+      "id": 8668357001562,
+      "title": "Idli Rice (Deccan)"
+    },
+    {
+      "id": 7043573186744,
+      "title": "Chakki Atta (Wheat Flour) (Pillsbury)"
+    },
+    {
+      "id": 6778096320696,
+      "title": "Chakki Atta (Wheat Flour) (East End)"
+    },
+    {
+      "id": 8642332852570,
+      "title": "Chakki Atta (Fortune)"
+    },
+    {
+      "id": 7043547267256,
+      "title": "Atta (Wheat Flour) (East end) 1.5 Kg"
+    },
+    {
+      "id": 8793822265690,
+      "title": "Atta (Elite)"
+    },
+    {
+      "id": 7232476512440,
+      "title": "Basmati Rice Premium (India Gate)"
+    },
+    {
+      "id": 6768948871352,
+      "title": "Basmati Rice (Tilda)"
+    },
+    {
+      "id": 6768948838584,
+      "title": "Basmati Rice (Chefs Choice)"
+    }
+  ],
+  "all-flour-1": [
+    {
+      "id": 8634829963610,
+      "title": "Instant Dosa Mix (Periyar)"
+    },
+    {
+      "id": 6767028469944,
+      "title": "Dessicated Coconut (East End)400Gm"
+    },
+    {
+      "id": 8630698770778,
+      "title": "Rice Puttupodi (Elite)"
+    },
+    {
+      "id": 6870369927352,
+      "title": "Rice Powder(Brahmins)1kg"
+    },
+    {
+      "id": 8634827538778,
+      "title": "Rice Dosa Mix (Elite)"
+    },
+    {
+      "id": 7278291910840,
+      "title": "PERIYAR PUTTU PODI 1KG"
+    },
+    {
+      "id": 8668258763098,
+      "title": "Maida (Palat)"
+    },
+    {
+      "id": 8563370819930,
+      "title": "HEERA CRUSHED WHEAT COARSE 500GM"
+    },
+    {
+      "id": 6767026438328,
+      "title": "Gram Flour Besan (KTC)"
+    },
+    {
+      "id": 7267386491064,
+      "title": "Gram Flour (TRS)"
+    },
+    {
+      "id": 8594730418522,
+      "title": "Gram Flour (East End) 2Kg"
+    },
+    {
+      "id": 7267393765560,
+      "title": "Gram Flour (East end)"
+    },
+    {
+      "id": 7267414933688,
+      "title": "Corn flour (Gem)"
+    },
+    {
+      "id": 6778096091320,
+      "title": "Idli Rava (Priya)"
+    },
+    {
+      "id": 8634845036890,
+      "title": "Fresh Made Upma Rava (Ajmi)"
+    },
+    {
+      "id": 8634515161434,
+      "title": "Fresh Made Rice Powder (Ajmi)"
+    },
+    {
+      "id": 8634830848346,
+      "title": "Fresh Made Dosa Podi (Ajmi)"
+    },
+    {
+      "id": 8633994019162,
+      "title": "Easy Palappam mix (Elite)"
+    },
+    {
+      "id": 8630697492826,
+      "title": "Corn Puttupodi (Periyar)"
+    },
+    {
+      "id": 7278291779768,
+      "title": "Corn Puttupodi (Brahmins)"
+    },
+    {
+      "id": 7278291943608,
+      "title": "White Puttupodi (Periyar)"
+    },
+    {
+      "id": 7278291747000,
+      "title": "White Puttupodi (Kitchen Treasures)"
+    },
+    {
+      "id": 7278291321016,
+      "title": "White Puttupodi (Brahmins)"
+    }
+  ],
+  "rusk-biscuts-swet-and-dates": [
+    {
+      "id": 8749522190682,
+      "title": "Til Laddu (Charliee)"
+    },
+    {
+      "id": 8749484441946,
+      "title": "Til Chikki (Charliee)"
+    },
+    {
+      "id": 8749487194458,
+      "title": "Peanut Laddu (Charliee)"
+    },
+    {
+      "id": 8624855056730,
+      "title": "Soan Papdi (Haldirams)"
+    },
+    {
+      "id": 8749481820506,
+      "title": "Peanut Chikki (Charliee)"
+    },
+    {
+      "id": 8749476741466,
+      "title": "Peanut Chikki (Charliee)"
+    },
+    {
+      "id": 8624446701914,
+      "title": "Motichoor Ladoo (Haldirams)"
+    },
+    {
+      "id": 8749501808986,
+      "title": "Butterscotch Peanut Chikki (Charliee)"
+    },
+    {
+      "id": 8749507510618,
+      "title": "Crushed Peanut Chikki (Charliee)"
+    },
+    {
+      "id": 8618764075354,
+      "title": "Gulab Jamun (Haldirams)"
+    },
+    {
+      "id": 8616016380250,
+      "title": "Besan Ladoo (Haldirams)"
+    },
+    {
+      "id": 6777870483640,
+      "title": "Parle - G (Parle)"
+    },
+    {
+      "id": 6777870516408,
+      "title": "Krack Jack (Parle)"
+    },
+    {
+      "id": 8750709047642,
+      "title": "Little hearts combo (britannia)"
+    },
+    {
+      "id": 8790189113690,
+      "title": "Milk Bikis (Britannia)"
+    },
+    {
+      "id": 8618808246618,
+      "title": "Toastea Milk Rusk (Britannia)"
+    },
+    {
+      "id": 6777870123192,
+      "title": "Toastea Suji Rusk (Britannia)"
+    },
+    {
+      "id": 8624606478682,
+      "title": "Premium Elaichi Rusk (Elite) 480 G"
+    },
+    {
+      "id": 6777870221496,
+      "title": "Premium Rusk (Parle) 600G"
+    },
+    {
+      "id": 8624453845338,
+      "title": "Original Rusk (Elite) 480 G"
+    },
+    {
+      "id": 8616604762458,
+      "title": "Almond Biscotti (Delicious Delight) 200 G"
+    },
+    {
+      "id": 8790280864090,
+      "title": "Fab cocolate (parle)"
+    },
+    {
+      "id": 8618793599322,
+      "title": "Hide and Seek Fab Strawberry (Parle) 112 G"
+    },
+    {
+      "id": 8741658755418,
+      "title": "Hide & Seek (Parle)"
+    },
+    {
+      "id": 6777870418104,
+      "title": "Good Day (Britannia) 72G"
+    },
+    {
+      "id": 8618622484826,
+      "title": "Crunchy Milk Rusk (Elite) 480 G"
+    },
+    {
+      "id": 8790437921114,
+      "title": "Cake rusk (crispy)"
+    }
+  ],
+  "snacks-kerala-and-north-indian": [
+    {
+      "id": 8624916169050,
+      "title": "Sweet Cheeda (Nila)"
+    },
+    {
+      "id": 8624919544154,
+      "title": "Sweet Kuzhalappam"
+    },
+    {
+      "id": 8624923345242,
+      "title": "Sweet Kuzhalappam (Nila)"
+    },
+    {
+      "id": 8790289547610,
+      "title": "Tapioca round (Kozhikoden's)"
+    },
+    {
+      "id": 8790272573786,
+      "title": "Sweet cheeda (Mayil)"
+    },
+    {
+      "id": 8624906043738,
+      "title": "Sweet Banana Chips (Nila)"
+    },
+    {
+      "id": 8624859775322,
+      "title": "Special Palak Murukku (Kozhikodens)"
+    },
+    {
+      "id": 8624870916442,
+      "title": "Special Murukku Spicy (Kozhikodens)"
+    },
+    {
+      "id": 8806120816986,
+      "title": "Special mixture (mayil)"
+    },
+    {
+      "id": 8749612237146,
+      "title": "Sev Puri (Charliee)"
+    },
+    {
+      "id": 8624616538458,
+      "title": "Punjabi Tadka (Haldirams)"
+    },
+    {
+      "id": 8624495984986,
+      "title": "Peanut Ball (Kozhikodens) 300 G Bottle"
+    },
+    {
+      "id": 6777870254264,
+      "title": "Pani Puri (Haldirams)"
+    },
+    {
+      "id": 8790518137178,
+      "title": "Nimbu masala (haldirams)"
+    },
+    {
+      "id": 6768982196408,
+      "title": "Murukku (Haldirams)"
+    },
+    {
+      "id": 8750713176410,
+      "title": "Mixture (nila)"
+    },
+    {
+      "id": 8623439348058,
+      "title": "Long Sev (Haldirams)"
+    },
+    {
+      "id": 6768982098104,
+      "title": "Moong Dal (Haldirams)"
+    },
+    {
+      "id": 8623463465306,
+      "title": "Mini Bhakhar Badi (Haldirams)"
+    },
+    {
+      "id": 8790519972186,
+      "title": "Methi sev (haldiram's)"
+    },
+    {
+      "id": 8623456715098,
+      "title": "Mathri (Haldirams)"
+    },
+    {
+      "id": 8623449571674,
+      "title": "Masala Moong Dal (Haldirams)"
+    },
+    {
+      "id": 7061095678136,
+      "title": "Kuzhalappam (Nila) 200g"
+    },
+    {
+      "id": 8623430173018,
+      "title": "Kuzhalappam (Delicious Delight) 20 G Bottle"
+    },
+    {
+      "id": 8623434137946,
+      "title": "Kuzhalappam (Mayil) 150 G"
+    },
+    {
+      "id": 8618721739098,
+      "title": "Extra Hot Mixture (Nitya)"
+    },
+    {
+      "id": 8618715054426,
+      "title": "Extra Hot Mixture (Nila) 350 G"
+    },
+    {
+      "id": 8623427322202,
+      "title": "Khatta Meetha (Haldirams) 200 G"
+    },
+    {
+      "id": 8623424667994,
+      "title": "Kerala Mixture Hot (Delicious Delight) 400 G Bottle"
+    },
+    {
+      "id": 8618696704346,
+      "title": "Kerala Mixture Extra hot (Kozhikodens) 350 G"
+    },
+    {
+      "id": 8618671145306,
+      "title": "Kerala Mixture Extra hot (Kozhikodens) 200 G"
+    },
+    {
+      "id": 8623412674906,
+      "title": "Kerala Mixture (Mayil) 250 G"
+    },
+    {
+      "id": 8623419031898,
+      "title": "Kerala Mixture (Delicious Delight) 400 G Bottle"
+    },
+    {
+      "id": 8806123372890,
+      "title": "Kerala hot mixture (mayil)"
+    },
+    {
+      "id": 8623353004378,
+      "title": "Kachori (Haldirams) 200"
+    },
+    {
+      "id": 8623337800026,
+      "title": "Jackfruit Chips (Mayil) 150 G"
+    },
+    {
+      "id": 8618835902810,
+      "title": "Jackfruit Chips (Kozzhikodens) 300 G"
+    },
+    {
+      "id": 8618729537882,
+      "title": "Gingelly Ball (Kozhikodens) 200 G"
+    },
+    {
+      "id": 8618751328602,
+      "title": "Garlic Mixture (Mayil) 250 G"
+    },
+    {
+      "id": 8750720287066,
+      "title": "Ellu murukku (delicious delight)"
+    },
+    {
+      "id": 8618608460122,
+      "title": "Chilli Pakkavada (Delicious Delight) 175 G"
+    },
+    {
+      "id": 8616737472858,
+      "title": "Chana Dal (Haldirams)"
+    },
+    {
+      "id": 8616707031386,
+      "title": "Boondi Masala (Haldirams)"
+    },
+    {
+      "id": 8616701428058,
+      "title": "Boondi (Haldirams)"
+    },
+    {
+      "id": 8616654569818,
+      "title": "Bombay Mixture (Mayil)"
+    },
+    {
+      "id": 8616648802650,
+      "title": "Bombay Mixture (Kozhikodens) Bottle"
+    },
+    {
+      "id": 8616643854682,
+      "title": "Bombay Mix (Haldirams)"
+    },
+    {
+      "id": 8616637202778,
+      "title": "Bhujia (Haldirams)"
+    },
+    {
+      "id": 8616626487642,
+      "title": "Bhelpuri (Haldirams)"
+    },
+    {
+      "id": 8616012874074,
+      "title": "Banana Sweet Chips (Kozhikodens) 200 G"
+    },
+    {
+      "id": 8616009564506,
+      "title": "Banana Chips (Nila)"
+    },
+    {
+      "id": 8616005271898,
+      "title": "Banana Chips (Mayil) 200 G"
+    },
+    {
+      "id": 8800655147354,
+      "title": "Banana chips (kozhikodens)"
+    },
+    {
+      "id": 6870137340088,
+      "title": "Avalose Unda(Mayil) 300g"
+    },
+    {
+      "id": 8615967490394,
+      "title": "Andhra Mixture (Mayil) 250G"
+    },
+    {
+      "id": 8615970668890,
+      "title": "Andhra Murukku (Delicious Delight) 300G"
+    },
+    {
+      "id": 6768982261944,
+      "title": "Aloo Bhujia (Haldirams)"
+    },
+    {
+      "id": 7061082243256,
+      "title": "Achappam (Nila) 200g"
+    },
+    {
+      "id": 6870370549944,
+      "title": "Achappam (Mayil)"
+    },
+    {
+      "id": 8615956873562,
+      "title": "Achappam (Kozhikodens) 170"
+    }
+  ],
+  "spices-whole-spice-powder-and-masalas": [
+    {
+      "id": 6765883392184,
+      "title": "Keema Curry (Shan) 50G"
+    },
+    {
+      "id": 8665274417498,
+      "title": "Chicken Tikka Masala (Shan)"
+    },
+    {
+      "id": 10502220939610,
+      "title": "KERA GINGER GARLIC PASTE 300gm"
+    },
+    {
+      "id": 6767028109496,
+      "title": "Star Anise Whole (East End)100Gm"
+    },
+    {
+      "id": 6766037926072,
+      "title": "Turmeric Powder (Brahmins)"
+    },
+    {
+      "id": 6767027912888,
+      "title": "Turmeric Powder (TRS)"
+    },
+    {
+      "id": 6767029223608,
+      "title": "Whole Cloves (East End) 50 Gm"
+    },
+    {
+      "id": 6765883588792,
+      "title": "Meat Masala (Shan)100G"
+    },
+    {
+      "id": 8692850753882,
+      "title": "Meat Masala (Shan)"
+    },
+    {
+      "id": 6767030370488,
+      "title": "Meat Masala (Mayil)"
+    },
+    {
+      "id": 7055215952056,
+      "title": "Meat Masala (Kitchen Treasures)"
+    },
+    {
+      "id": 6766037860536,
+      "title": "Meat Curry Masala (MDH)"
+    },
+    {
+      "id": 7055191113912,
+      "title": "Masala for Meat (Grandmas)"
+    },
+    {
+      "id": 7055202320568,
+      "title": "Masala for Fish curry (Grandmas)"
+    },
+    {
+      "id": 6767030796472,
+      "title": "Masala for Chicken (Periyar)"
+    },
+    {
+      "id": 6777006883000,
+      "title": "Dried White Lime (Sofra) 50G"
+    },
+    {
+      "id": 8739709059418,
+      "title": "Chilli Powder (Mayil)"
+    },
+    {
+      "id": 6767028338872,
+      "title": "Chilli Powder (East End)"
+    },
+    {
+      "id": 6767029878968,
+      "title": "Chilli Powder (Brahmins)"
+    },
+    {
+      "id": 8741878366554,
+      "title": "Garam Masala (Shan)"
+    },
+    {
+      "id": 6767027978424,
+      "title": "Garam Masala (Grandmas)"
+    },
+    {
+      "id": 7055208644792,
+      "title": "Fish Masala (Kitchen Treasures)"
+    },
+    {
+      "id": 6767030141112,
+      "title": "Fish Fry Masala (Aachi)"
+    },
+    {
+      "id": 6766037893304,
+      "title": "Fish Curry  Masala (MDH)"
+    },
+    {
+      "id": 6767028797624,
+      "title": "Fennel Seeds(Trs) 100Gm"
+    },
+    {
+      "id": 6767029125304,
+      "title": "Cinnamon Stick (Dalchini)(East End) 100G"
+    },
+    {
+      "id": 6765883359416,
+      "title": "Chicken Tikka (Shan) 60G"
+    },
+    {
+      "id": 6778194788536,
+      "title": "Chicken Masala (Mayil)"
+    },
+    {
+      "id": 8665256952154,
+      "title": "Butter Chicken (Shan)"
+    },
+    {
+      "id": 6767029059768,
+      "title": "Black Salt Powder (East End)"
+    },
+    {
+      "id": 6777006850232,
+      "title": "Black Lime Dried (Sofra) 50G"
+    },
+    {
+      "id": 6767027847352,
+      "title": "Black Cumin (East End)100Gm"
+    },
+    {
+      "id": 7055222603960,
+      "title": "Chicken Masala (Kitchen Treasures)"
+    },
+    {
+      "id": 6767030829240,
+      "title": "Chicken Masala (Grandmas)"
+    },
+    {
+      "id": 6778195509432,
+      "title": "Chicken Masala (Double Horse)"
+    },
+    {
+      "id": 8665276219738,
+      "title": "Chicken Jalfrezi (Shan)"
+    },
+    {
+      "id": 8613049139546,
+      "title": "Chicken Curry Masala (MDH)"
+    },
+    {
+      "id": 6765883621560,
+      "title": "Chat Masala (Shan) 100G"
+    },
+    {
+      "id": 6767029321912,
+      "title": "Black Pepper Powder (East End)"
+    },
+    {
+      "id": 6765883326648,
+      "title": "Biriyani Masala (Shan) 60G"
+    },
+    {
+      "id": 8739828498778,
+      "title": "Beef Ularth Masala (Saras)"
+    },
+    {
+      "id": 6767028240568,
+      "title": "Bay Leaf (East End)40Gm"
+    },
+    {
+      "id": 6777006588088,
+      "title": "Asafoetida Powder (LG)"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --foreground-rgb: 30, 41, 59;
+  --background-start-rgb: 253, 251, 247;
+  --background-end-rgb: 253, 251, 247;
+
+  /* Asianmix Official Color Palette Tokens */
+  --color-primary: #5C3415;             /* Warm Umber Brown from Wordmark */
+  --color-primary-hover: #4A280F;
+  --color-primary-dark: #3D200B;        /* Footer & Dark Headings */
+  --color-primary-light: #FBF6F0;
+  
+  --color-secondary: #7A123A;           /* Authentic Asianmix Burgundy */
+  --color-secondary-hover: #630E2E;
+  --color-secondary-light: #FDF2F6;
+
+  /* Pinwheel Functional Accent Colors */
+  --color-accent-green: #5C9C2A;        /* "In Stock", Success, Fresh Produce */
+  --color-accent-green-light: #F0F8E8;
+  --color-accent-green-border: #9FCD6A;
+
+  --color-accent-orange: #E68A00;       /* "Deal of the Day", Sale Tags, Promos */
+  --color-accent-orange-light: #FFF8E7;
+  --color-accent-orange-border: #FFD05A;
+
+  --color-accent-teal: #0E9BAE;         /* Informational Tags, Filter Chips */
+  --color-accent-teal-light: #EBF8FA;
+  --color-accent-teal-border: #11BAD1;
+
+  --color-accent-red: #D93829;          /* "Out of Stock", Urgency Indicators */
+  --color-accent-red-light: #FDF2F0;
+  --color-accent-red-border: #F1422F;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #FBF9F5;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ede4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4a373;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c85a32;
+}
+
+/* Badge pulse animation */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
+}
