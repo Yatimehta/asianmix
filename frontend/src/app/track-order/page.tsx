@@ -204,10 +204,10 @@ function TrackOrderContent() {
         {order && (
           <div className="bg-white rounded-3xl border border-stone-200/90 shadow-sm overflow-hidden mb-12">
             {/* Order Banner Header */}
-            <div className="bg-gradient-to-r from-primary via-[#6B3E19] to-secondary text-white p-6 sm:p-8">
+            <div className="bg-brand-brown-dark text-white p-6 sm:p-8 border-b border-[#5A2F0B]">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <span className="text-xs font-semibold text-amber-200/80 uppercase tracking-wider">
+                  <span className="text-xs font-semibold text-brand-yellow-base uppercase tracking-wider">
                     Order Reference
                   </span>
                   <h2 className="text-2xl font-black tracking-tight">{order.orderNumber}</h2>

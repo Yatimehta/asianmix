@@ -36,10 +36,10 @@ export default function RegisterPage() {
     <div className="min-h-[85vh] bg-[#FBF9F5] flex items-center justify-center p-4 sm:p-6">
       <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-stone-200/80 shadow-xl space-y-6">
         <div className="text-center">
-          <div className="w-12 h-12 rounded-2xl bg-asian-terracotta-500 text-white font-bold text-2xl flex items-center justify-center mx-auto shadow-md mb-3">
+          <div className="w-12 h-12 rounded-2xl bg-[#FFBE26] text-[#2C2C2A] font-black text-2xl flex items-center justify-center mx-auto shadow-md mb-3">
             亞
           </div>
-          <h1 className="text-2xl font-black text-stone-900">Create Account</h1>
+          <h1 className="text-2xl font-black text-[#2C2C2A]">Create Account</h1>
           <p className="text-xs text-stone-500 mt-1">
             Join Asianmix Ireland for 10% off your first order & fast reordering
           </p>
@@ -61,7 +61,7 @@ export default function RegisterPage() {
                 placeholder="Sean Murphy"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
               />
               <User className="w-4 h-4 text-stone-400 absolute left-3.5 top-3.5" />
             </div>
@@ -76,7 +76,7 @@ export default function RegisterPage() {
                 placeholder="name@example.ie"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
               />
               <Mail className="w-4 h-4 text-stone-400 absolute left-3.5 top-3.5" />
             </div>
@@ -92,7 +92,7 @@ export default function RegisterPage() {
                 placeholder="+353 87 123 4567"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
               />
               <Phone className="w-4 h-4 text-stone-400 absolute left-3.5 top-3.5" />
             </div>
@@ -107,7 +107,7 @@ export default function RegisterPage() {
                 placeholder="At least 6 characters"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
               />
               <Lock className="w-4 h-4 text-stone-400 absolute left-3.5 top-3.5" />
             </div>
@@ -116,7 +116,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2"
+            className="w-full py-3.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2"
           >
             <span>{loading ? 'Creating Account...' : 'Register'}</span>
             <ArrowRight className="w-4 h-4" />
@@ -125,7 +125,7 @@ export default function RegisterPage() {
 
         <div className="text-center text-xs text-stone-500">
           Already have an Asianmix account?{' '}
-          <Link href="/account/login" className="font-bold text-asian-terracotta-600 hover:underline">
+          <Link href="/account/login" className="font-bold text-[#2C2C2A] hover:underline">
             Sign in
           </Link>
         </div>

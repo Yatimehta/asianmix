@@ -51,18 +51,18 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-[70vh] bg-[#FBF9F5] flex items-center justify-center p-6">
+      <div className="min-h-[70vh] bg-[#F8F7F4] flex items-center justify-center p-6">
         <div className="max-w-md w-full bg-white rounded-3xl p-8 border border-stone-200 text-center shadow-sm">
-          <div className="w-20 h-20 mx-auto rounded-full bg-asian-terracotta-50 flex items-center justify-center text-asian-terracotta-500 mb-4">
+          <div className="w-20 h-20 mx-auto rounded-full bg-brand-yellow-light flex items-center justify-center text-brand-yellow-dark mb-4">
             <ShoppingBag className="w-10 h-10" />
           </div>
-          <h1 className="text-2xl font-black text-stone-900">Your Basket is Empty</h1>
+          <h1 className="text-2xl font-black text-[#2C2C2A]">Your Basket is Empty</h1>
           <p className="text-xs text-stone-500 mt-2 mb-6">
             Looks like you haven&apos;t added any authentic Asian sauces, noodles, or ingredients to your basket yet.
           </p>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white font-bold text-xs rounded-full shadow-lg transition"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs rounded-full shadow-lg transition"
           >
             <span>Explore Asian Groceries</span>
             <ArrowRight className="w-4 h-4" />
@@ -73,26 +73,26 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FBF9F5] py-10">
+    <div className="min-h-screen bg-[#F8F7F4] py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
-          <h1 className="text-2xl sm:text-3xl font-black text-stone-900">
+          <h1 className="text-2xl sm:text-3xl font-black text-[#2C2C2A]">
             Shopping Basket ({itemCount} {itemCount === 1 ? 'item' : 'items'})
           </h1>
           <p className="text-xs text-stone-500 mt-1">Review your items before Ireland courier dispatch</p>
         </div>
 
         {/* Free Shipping Progress Alert */}
-        <div className="bg-white rounded-2xl p-4 sm:p-5 border border-asian-jade-200/80 mb-8 shadow-sm">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-bold text-asian-jade-800 mb-2">
+        <div className="bg-white rounded-2xl p-4 sm:p-5 border border-brand-green-border mb-8 shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-bold text-stone-800 mb-2">
             <span className="flex items-center gap-2">
-              <Truck className="w-4 h-4 text-asian-jade-600 shrink-0" />
+              <Truck className="w-4 h-4 text-brand-green-base shrink-0" />
               {amountNeededForFreeShipping > 0 ? (
                 <span>
-                  Add <strong className="text-asian-terracotta-600">{formatEUR(amountNeededForFreeShipping)}</strong> more to unlock <strong>FREE Delivery Across Ireland</strong>!
+                  Add <strong className="text-brand-yellow-dark">{formatEUR(amountNeededForFreeShipping)}</strong> more to unlock <strong>FREE Delivery Across Ireland</strong>!
                 </span>
               ) : (
-                <span className="text-asian-jade-700">🎉 Congratulations! You have unlocked FREE Shipping to all 32 counties!</span>
+                <span className="text-brand-green-dark font-black">🎉 Congratulations! You have unlocked FREE Shipping to all 32 counties!</span>
               )}
             </span>
             <span>{freeShippingProgress}% Completed</span>
@@ -100,7 +100,7 @@ export default function CartPage() {
 
           <div className="w-full bg-stone-100 h-2.5 rounded-full overflow-hidden">
             <div
-              className="bg-gradient-to-r from-asian-jade-500 to-asian-mustard-400 h-full rounded-full transition-all duration-500"
+              className="bg-gradient-to-r from-brand-green-base to-[#FFBE26] h-full rounded-full transition-all duration-500"
               style={{ width: `${freeShippingProgress}%` }}
             />
           </div>
@@ -108,8 +108,8 @@ export default function CartPage() {
 
         {/* Main 2-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Left Column: Cart Items (8 cols) */}
-          <div className="lg:col-span-8 bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm">
+          {/* Left Column: Cart Items List (8 cols) */}
+          <div className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/80 shadow-sm">
             <div className="divide-y divide-stone-100">
               {items.map((item) => (
                 <div key={item.id} className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -122,12 +122,12 @@ export default function CartPage() {
                     <div>
                       <Link
                         href={`/products/${item.slug}`}
-                        className="text-sm font-bold text-stone-900 hover:text-asian-terracotta-600 transition line-clamp-2"
+                        className="text-sm font-bold text-[#2C2C2A] hover:text-black transition line-clamp-2"
                       >
                         {item.name}
                       </Link>
                       <p className="text-xs text-stone-400 mt-0.5">{item.weight || 'Standard item'}</p>
-                      <p className="text-sm font-black text-asian-terracotta-600 mt-1">
+                      <p className="text-sm font-black text-[#2C2C2A] mt-1">
                         {formatEUR(item.price)}
                       </p>
                     </div>
@@ -175,7 +175,7 @@ export default function CartPage() {
             <div className="pt-6 border-t border-stone-100 flex items-center justify-between">
               <Link
                 href="/products"
-                className="text-xs font-bold text-asian-terracotta-600 hover:underline flex items-center gap-1"
+                className="text-xs font-bold text-[#2C2C2A] hover:underline flex items-center gap-1"
               >
                 ← Continue Shopping
               </Link>
@@ -198,7 +198,7 @@ export default function CartPage() {
               {/* Coupon Form */}
               <form onSubmit={handleApplyPromo} className="space-y-2">
                 <label className="text-xs font-bold text-stone-600 flex items-center gap-1">
-                  <Tag className="w-3.5 h-3.5 text-asian-terracotta-500" />
+                  <Tag className="w-3.5 h-3.5 text-[#2C2C2A]" />
                   Have a Promo Code?
                 </label>
                 <div className="flex gap-2">
@@ -207,11 +207,11 @@ export default function CartPage() {
                     placeholder="e.g. ASIAN10"
                     value={promoCode}
                     onChange={(e) => setPromoCode(e.target.value)}
-                    className="flex-1 uppercase text-xs p-2.5 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                    className="flex-1 uppercase text-xs p-2.5 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2.5 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs font-bold transition"
+                    className="px-4 py-2.5 bg-[#2C2C2A] hover:bg-black text-white rounded-xl text-xs font-bold transition"
                   >
                     Apply
                   </button>
@@ -242,7 +242,7 @@ export default function CartPage() {
                   <span>Ireland Delivery</span>
                   <span className="font-semibold">
                     {shippingFee === 0 ? (
-                      <span className="text-asian-jade-600 font-bold">FREE</span>
+                      <span className="text-brand-green-dark font-black">FREE</span>
                     ) : (
                       formatEUR(shippingFee)
                     )}
@@ -258,7 +258,7 @@ export default function CartPage() {
               {/* Grand Total */}
               <div className="pt-4 border-t border-stone-200 flex justify-between items-baseline">
                 <span className="text-sm font-bold text-stone-900">Total Due</span>
-                <span className="text-2xl font-black text-asian-terracotta-600">
+                <span className="text-2xl font-black text-[#2C2C2A]">
                   {formatEUR(grandTotal)}
                 </span>
               </div>
@@ -266,14 +266,14 @@ export default function CartPage() {
               {/* Checkout Button */}
               <Link
                 href="/checkout"
-                className="w-full py-4 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white font-bold text-sm rounded-2xl shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2"
+                className="w-full py-4 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-sm rounded-2xl shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2"
               >
                 <span>Proceed to Checkout</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
               <div className="pt-2 text-center text-[10px] text-stone-400 flex items-center justify-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-asian-jade-600" />
+                <ShieldCheck className="w-4 h-4 text-brand-green-base" />
                 <span>Stripe Encrypted & Certified Ireland Checkout</span>
               </div>
             </div>

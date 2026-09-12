@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
-      <body className="font-sans antialiased text-stone-800 bg-[#FBF9F5] min-h-screen flex flex-col selection:bg-asian-terracotta-500 selection:text-white">
+      <body className="font-sans antialiased text-[#2C2C2A] bg-[#F8F7F4] min-h-screen flex flex-col selection:bg-[#FFBE26] selection:text-[#2C2C2A]">
         <AuthProvider>
           <WishlistProvider>
             <CartProvider>

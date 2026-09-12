@@ -222,7 +222,7 @@ function ProductCatalogContent() {
     (search ? 1 : 0);
 
   return (
-    <div className="min-h-screen bg-[#FBF9F5] py-8">
+    <div className="min-h-screen bg-[#F8F7F4] py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Breadcrumb & Title */}
         <div className="mb-6">
@@ -237,9 +237,9 @@ function ProductCatalogContent() {
             (() => {
               const activeCat = categoriesList.find((c) => c.slug === selectedCategory);
               return (
-                <div className="mb-6 bg-gradient-to-r from-primary via-[#6B3E19] to-secondary rounded-3xl p-6 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
+                <div className="mb-6 bg-[#2C2C2A] rounded-3xl p-6 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-card relative overflow-hidden border border-stone-800">
                   <div className="max-w-xl z-10">
-                    <span className="inline-block bg-white/20 text-accent-orange-border text-[10px] sm:text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                    <span className="inline-block bg-brand-yellow-base text-brand-yellow-dark text-[10px] sm:text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider mb-2">
                       Asianmix Aisle
                     </span>
                     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
@@ -715,8 +715,8 @@ export default function ProductCatalogPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-[#FBF9F5] flex items-center justify-center p-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-asian-terracotta-500" />
+        <div className="min-h-screen bg-[#F8F7F4] flex items-center justify-center p-8">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#FFBE26]" />
         </div>
       }
     >

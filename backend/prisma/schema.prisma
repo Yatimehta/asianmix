@@ -40,6 +40,8 @@ model Address {
   updatedAt    DateTime @updatedAt
 
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model Category {
@@ -54,6 +56,8 @@ model Category {
   updatedAt   DateTime  @updatedAt
 
   products    Product[]
+
+  @@index([orderIndex])
 }
 
 model Product {
@@ -84,6 +88,14 @@ model Product {
   reviews        Review[]
   cartItems      CartItem[]
   wishlistItems  WishlistItem[]
+
+  @@index([categoryId])
+  @@index([isFeatured])
+  @@index([isBestSeller])
+  @@index([isNewArrival])
+  @@index([originCountry])
+  @@index([price])
+  @@index([createdAt])
 }
 
 model Order {
@@ -109,6 +121,10 @@ model Order {
 
   user            User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
   items           OrderItem[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
 }
 
 model OrderItem {
@@ -123,6 +139,9 @@ model OrderItem {
 
   order        Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
   product      Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+
+  @@index([orderId])
+  @@index([productId])
 }
 
 model Review {
@@ -138,6 +157,9 @@ model Review {
 
   product            Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([productId])
+  @@index([userId])
 }
 
 model Cart {
@@ -161,6 +183,9 @@ model CartItem {
 
   cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
   product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([cartId])
+  @@index([productId])
 }
 
 model WishlistItem {

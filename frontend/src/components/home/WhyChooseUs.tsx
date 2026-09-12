@@ -6,46 +6,46 @@ const TRUST_BADGES = [
     icon: Truck,
     title: 'Fast Nationwide Delivery',
     description: 'Dispatch to all 32 counties. Free delivery on orders over €50.',
-    color: 'text-asian-terracotta-600 bg-asian-terracotta-50 border-asian-terracotta-200/60',
+    color: 'text-brand-yellow-dark bg-brand-yellow-light border-brand-yellow-border',
   },
   {
     icon: ShieldCheck,
     title: 'Authentic & Quality Products',
     description: 'Directly imported from Japan, Korea, Thailand, China & India.',
-    color: 'text-asian-jade-600 bg-asian-jade-50 border-asian-jade-200/60',
+    color: 'text-brand-green-dark bg-brand-green-light border-brand-green-border',
   },
   {
     icon: Tag,
     title: 'Best Prices Guaranteed',
     description: 'Fair Irish shelf prices and multi-buy bundle discounts.',
-    color: 'text-amber-600 bg-amber-50 border-amber-200/60',
+    color: 'text-brand-teal-dark bg-brand-teal-light border-brand-teal-border',
   },
   {
     icon: RotateCcw,
     title: 'Easy Returns & Refunds',
     description: 'Damaged or compromised item guarantee with fast instant refund.',
-    color: 'text-blue-600 bg-blue-50 border-blue-200/60',
+    color: 'text-brand-red-dark bg-brand-red-light border-brand-red-border',
   },
   {
     icon: Headphones,
     title: 'Dedicated Irish Support',
     description: 'Local friendly team in Cork & Dublin ready to assist 7 days a week.',
-    color: 'text-purple-600 bg-purple-50 border-purple-200/60',
+    color: 'text-[#2C2C2A] bg-stone-100 border-stone-200',
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-14 sm:py-16 bg-[#FBF9F5]">
+    <section className="py-14 sm:py-16 bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-xl mx-auto mb-10">
-          <span className="text-xs font-black uppercase tracking-widest text-asian-terracotta-600">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFBE26]/20 border border-[#FFBE26]/40 text-xs font-black text-[#2C2C2A] uppercase tracking-widest">
             Our Ireland Promise
           </span>
-          <h2 className="text-2xl sm:text-3xl font-black text-stone-900 mt-1">
+          <h2 className="text-2xl sm:text-3xl font-black text-[#2C2C2A] mt-2">
             Why Choose Asianmix?
           </h2>
-          <p className="text-xs sm:text-sm text-stone-500 mt-1">
+          <p className="text-xs sm:text-sm text-stone-600 mt-1">
             Ireland&apos;s most trusted Asian supermarket committed to quality, freshness, and authentic pantry favorites.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
                   <Icon className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-black text-stone-900 group-hover:text-asian-terracotta-600 transition">
+                  <h3 className="text-sm font-black text-stone-900 group-hover:text-[#2C2C2A] transition">
                     {badge.title}
                   </h3>
                   <p className="text-xs text-stone-500 mt-1 leading-relaxed">

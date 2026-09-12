@@ -175,8 +175,8 @@ export default function AdminPage() {
 
   if (authLoading || loading) {
     return (
-      <div className="min-h-screen bg-[#FBF9F5] flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-asian-terracotta-500" />
+      <div className="min-h-screen bg-[#F8F7F4] flex items-center justify-center p-8">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#FFBE26]" />
       </div>
     );
   }
@@ -188,16 +188,16 @@ export default function AdminPage() {
   );
 
   return (
-    <div className="min-h-screen bg-[#FBF9F5] py-8">
+    <div className="min-h-screen bg-[#F8F7F4] py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Admin Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/80 shadow-sm">
           <div>
             <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-xl bg-asian-jade-600 text-white flex items-center justify-center font-bold text-sm">
+              <span className="w-8 h-8 rounded-xl bg-brand-green-base text-white flex items-center justify-center font-bold text-sm">
                 <ShieldCheck className="w-5 h-5" />
               </span>
-              <h1 className="text-2xl font-black text-stone-900">Asianmix Ireland Admin</h1>
+              <h1 className="text-2xl font-black text-[#2C2C2A]">Asianmix Ireland Admin</h1>
             </div>
             <p className="text-xs text-stone-500 mt-1">
               Store operations, Ireland orders, inventory management & sales analytics
@@ -207,7 +207,7 @@ export default function AdminPage() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setShowProductModal(true)}
-              className="px-4 py-2.5 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow"
+              className="px-4 py-2.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] rounded-xl text-xs font-black transition flex items-center gap-1.5 shadow"
             >
               <Plus className="w-4 h-4" />
               <span>Add New Product</span>
@@ -225,24 +225,24 @@ export default function AdminPage() {
         {analytics && (
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <div className="bg-white rounded-2xl p-5 border border-stone-200/80 shadow-sm flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-asian-terracotta-50 text-asian-terracotta-600 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-brand-yellow-light text-brand-yellow-dark flex items-center justify-center shrink-0">
                 <BarChart3 className="w-6 h-6" />
               </div>
               <div>
                 <span className="text-xs text-stone-400 font-semibold block">Total Revenue</span>
-                <span className="text-xl font-black text-stone-900">
+                <span className="text-xl font-black text-[#2C2C2A]">
                   {formatEUR(analytics.totalRevenue)}
                 </span>
               </div>
             </div>
 
             <div className="bg-white rounded-2xl p-5 border border-stone-200/80 shadow-sm flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-asian-jade-50 text-asian-jade-600 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-brand-green-light text-brand-green-dark flex items-center justify-center shrink-0">
                 <ShoppingBag className="w-6 h-6" />
               </div>
               <div>
                 <span className="text-xs text-stone-400 font-semibold block">Total Orders</span>
-                <span className="text-xl font-black text-stone-900">{analytics.totalOrders}</span>
+                <span className="text-xl font-black text-[#2C2C2A]">{analytics.totalOrders}</span>
               </div>
             </div>
 
@@ -274,7 +274,7 @@ export default function AdminPage() {
             onClick={() => setActiveTab('analytics')}
             className={`pb-3 text-sm font-bold transition border-b-2 -mb-[2px] ${
               activeTab === 'analytics'
-                ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                ? 'border-[#FFBE26] text-[#2C2C2A]'
                 : 'border-transparent text-stone-500 hover:text-stone-800'
             }`}
           >
@@ -284,7 +284,7 @@ export default function AdminPage() {
             onClick={() => setActiveTab('inventory')}
             className={`pb-3 text-sm font-bold transition border-b-2 -mb-[2px] ${
               activeTab === 'inventory'
-                ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                ? 'border-[#FFBE26] text-[#2C2C2A]'
                 : 'border-transparent text-stone-500 hover:text-stone-800'
             }`}
           >
@@ -294,7 +294,7 @@ export default function AdminPage() {
             onClick={() => setActiveTab('orders')}
             className={`pb-3 text-sm font-bold transition border-b-2 -mb-[2px] ${
               activeTab === 'orders'
-                ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                ? 'border-[#FFBE26] text-[#2C2C2A]'
                 : 'border-transparent text-stone-500 hover:text-stone-800'
             }`}
           >
@@ -330,7 +330,7 @@ export default function AdminPage() {
             {/* Recent Orders Overview */}
             <div className="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm space-y-4">
               <h3 className="text-base font-bold text-stone-900 flex items-center gap-2">
-                <Truck className="w-4 h-4 text-asian-jade-600" />
+                <Truck className="w-4 h-4 text-brand-green-base" />
                 Latest Ireland Shipments
               </h3>
 
@@ -344,7 +344,7 @@ export default function AdminPage() {
                       </p>
                     </div>
                     <div className="text-right">
-                      <span className="text-xs font-bold text-asian-terracotta-600 block">
+                      <span className="text-xs font-bold text-[#2C2C2A] block">
                         {formatEUR(ord.totalAmount)}
                       </span>
                       <span className="text-[10px] uppercase font-bold text-stone-500">
@@ -402,7 +402,7 @@ export default function AdminPage() {
                           <div>
                             <Link
                               href={`/products/${prod.slug}`}
-                              className="font-bold text-stone-900 hover:text-asian-terracotta-600 line-clamp-1"
+                              className="font-bold text-stone-900 hover:text-black line-clamp-1"
                             >
                               {prod.name}
                             </Link>
@@ -427,12 +427,12 @@ export default function AdminPage() {
                               type="number"
                               value={editStockVal}
                               onChange={(e) => setEditStockVal(parseInt(e.target.value, 10) || 0)}
-                              className="w-16 p-1 border border-asian-terracotta-400 rounded text-xs font-bold"
+                              className="w-16 p-1 border border-[#FFBE26] rounded text-xs font-bold"
                             />
                             <button
                               onClick={() => handleUpdateStock(prod.id)}
                               disabled={savingStock}
-                              className="p-1 bg-asian-jade-600 text-white rounded hover:bg-asian-jade-700"
+                              className="p-1 bg-brand-green-base text-white rounded hover:bg-emerald-700"
                             >
                               <Save className="w-3.5 h-3.5" />
                             </button>
@@ -457,7 +457,7 @@ export default function AdminPage() {
                                 setEditingStockId(prod.id);
                                 setEditStockVal(prod.stock);
                               }}
-                              className="text-stone-400 hover:text-asian-terracotta-600"
+                              className="text-stone-400 hover:text-stone-700"
                               title="Edit Stock"
                             >
                               <Edit className="w-3.5 h-3.5" />
@@ -505,7 +505,7 @@ export default function AdminPage() {
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <span className="text-sm font-black text-asian-terracotta-600">
+                      <span className="text-sm font-black text-[#2C2C2A]">
                         {formatEUR(ord.totalAmount)}
                       </span>
 
@@ -546,7 +546,7 @@ export default function AdminPage() {
                   </div>
 
                   {ord.trackingNumber && (
-                    <p className="text-[11px] text-asian-jade-700 font-semibold">
+                    <p className="text-[11px] text-brand-green-dark font-semibold">
                       📦 Tracking Number: {ord.trackingNumber}
                     </p>
                   )}
@@ -702,7 +702,7 @@ export default function AdminPage() {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 py-2.5 text-xs font-bold text-white bg-asian-terracotta-500 rounded-xl"
+                    className="flex-1 py-2.5 text-xs font-black text-[#2C2C2A] bg-[#FFBE26] hover:bg-[#E5A30B] rounded-xl transition"
                   >
                     Publish Product
                   </button>

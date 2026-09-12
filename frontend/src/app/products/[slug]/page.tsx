@@ -77,23 +77,21 @@ export default function ProductDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-[#FBF9F5] flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-asian-terracotta-500" />
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#FFBE26]" />
       </div>
     );
   }
 
   if (!product) {
     return (
-      <div className="min-h-[60vh] bg-[#FBF9F5] flex flex-col items-center justify-center p-8 text-center">
-        <h2 className="text-2xl font-bold text-stone-800">Product Not Found</h2>
-        <p className="text-sm text-stone-500 mt-2 mb-6">
-          The Asian grocery item you are looking for might have moved or been restocked with a new SKU.
-        </p>
+      <div className="min-h-[60vh] flex flex-col items-center justify-center p-6 text-center">
+        <h2 className="text-2xl font-bold text-stone-800 mb-2">Product Not Found</h2>
+        <p className="text-stone-500 text-sm mb-6">The grocery item you are looking for may be temporarily out of stock.</p>
         <Link
           href="/products"
-          className="px-6 py-2.5 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white font-bold text-xs rounded-full shadow transition"
+          className="px-6 py-2.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs rounded-full shadow transition"
         >
-          Return to Catalog
+          Return to Supermarket
         </Link>
       </div>
     );
@@ -397,19 +395,19 @@ export default function ProductDetailPage() {
             {/* Ireland Shipping Perks */}
             <div className="space-y-2 pt-4 border-t border-stone-100 text-xs text-stone-600">
               <div className="flex items-center gap-2.5">
-                <Truck className="w-4 h-4 text-asian-terracotta-500 shrink-0" />
+                <Truck className="w-4 h-4 text-[#FFBE26] shrink-0" />
                 <span>
                   <strong>Ireland Nationwide Delivery:</strong> Next-day dispatch. Free delivery on orders over €50.
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Snowflake className="w-4 h-4 text-asian-jade-600 shrink-0" />
+                <Snowflake className="w-4 h-4 text-brand-green-base shrink-0" />
                 <span>
                   <strong>Cold-Pack Packaging:</strong> Perishables packed with insulated thermal liner & ice packs.
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-asian-mustard-600 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-brand-teal-base shrink-0" />
                 <span>
                   <strong>100% Authentic Guarantee:</strong> Imported directly from verified Asian manufacturers.
                 </span>
@@ -425,7 +423,7 @@ export default function ProductDetailPage() {
               onClick={() => setActiveTab('desc')}
               className={`pb-4 text-sm font-bold transition border-b-2 -mb-[2px] ${
                 activeTab === 'desc'
-                  ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                  ? 'border-[#FFBE26] text-[#2C2C2A]'
                   : 'border-transparent text-stone-500 hover:text-stone-800'
               }`}
             >
@@ -435,7 +433,7 @@ export default function ProductDetailPage() {
               onClick={() => setActiveTab('ingredients')}
               className={`pb-4 text-sm font-bold transition border-b-2 -mb-[2px] ${
                 activeTab === 'ingredients'
-                  ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                  ? 'border-[#FFBE26] text-[#2C2C2A]'
                   : 'border-transparent text-stone-500 hover:text-stone-800'
               }`}
             >
@@ -445,7 +443,7 @@ export default function ProductDetailPage() {
               onClick={() => setActiveTab('reviews')}
               className={`pb-4 text-sm font-bold transition border-b-2 -mb-[2px] ${
                 activeTab === 'reviews'
-                  ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                  ? 'border-[#FFBE26] text-[#2C2C2A]'
                   : 'border-transparent text-stone-500 hover:text-stone-800'
               }`}
             >
@@ -497,12 +495,12 @@ export default function ProductDetailPage() {
                           <div className="flex items-center gap-2">
                             <span className="font-bold text-sm text-stone-800">{rev.user?.name || 'Customer'}</span>
                             {rev.isVerifiedPurchase && (
-                              <span className="text-[10px] bg-asian-jade-50 text-asian-jade-700 px-2 py-0.5 rounded-full font-bold">
+                              <span className="text-[10px] bg-brand-green-light text-brand-green-dark border border-brand-green-border px-2 py-0.5 rounded-full font-bold">
                                 Verified Irish Buyer
                               </span>
                             )}
                           </div>
-                          <div className="flex text-asian-mustard-500">
+                          <div className="flex text-brand-yellow-base">
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
@@ -523,7 +521,7 @@ export default function ProductDetailPage() {
                 {/* Write a Review Section */}
                 <div className="p-6 rounded-2xl bg-stone-50 border border-stone-200/80">
                   <h4 className="text-sm font-bold text-stone-900 flex items-center gap-2 mb-3">
-                    <MessageSquarePlus className="w-4 h-4 text-asian-terracotta-500" />
+                    <MessageSquarePlus className="w-4 h-4 text-[#FFBE26]" />
                     Write a Review
                   </h4>
 
@@ -537,7 +535,7 @@ export default function ProductDetailPage() {
                               key={star}
                               type="button"
                               onClick={() => setReviewRating(star)}
-                              className="text-asian-mustard-500 hover:scale-110 transition p-1"
+                              className="text-brand-yellow-base hover:scale-110 transition p-1"
                             >
                               <Star
                                 className={`w-5 h-5 ${star <= reviewRating ? 'fill-current' : 'text-stone-300'}`}
@@ -577,7 +575,7 @@ export default function ProductDetailPage() {
                       <button
                         type="submit"
                         disabled={submittingReview}
-                        className="px-5 py-2.5 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white font-bold text-xs rounded-xl flex items-center gap-2 transition"
+                        className="px-5 py-2.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs rounded-xl flex items-center gap-2 transition"
                       >
                         <Send className="w-3.5 h-3.5" />
                         <span>{submittingReview ? 'Submitting...' : 'Submit Review'}</span>
@@ -586,7 +584,7 @@ export default function ProductDetailPage() {
                   ) : (
                     <div className="text-xs text-stone-500">
                       Please{' '}
-                      <Link href="/account/login" className="text-asian-terracotta-600 font-bold underline">
+                      <Link href="/account/login" className="text-[#2C2C2A] font-bold underline">
                         sign in
                       </Link>{' '}
                       to leave a verified product review.

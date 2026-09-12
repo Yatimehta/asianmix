@@ -129,14 +129,14 @@ export default function AccountPage() {
         {/* User Greeting & Header */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/80 shadow-sm mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-asian-terracotta-500 to-asian-terracotta-700 text-white font-bold text-2xl flex items-center justify-center shadow-md">
+            <div className="w-16 h-16 rounded-2xl bg-[#FFBE26] text-[#2C2C2A] font-black text-2xl flex items-center justify-center shadow-md">
               {user.name.charAt(0).toUpperCase()}
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-xl sm:text-2xl font-black text-stone-900">{user.name}</h1>
+                <h1 className="text-xl sm:text-2xl font-black text-[#2C2C2A]">{user.name}</h1>
                 {isAdmin && (
-                  <span className="bg-asian-jade-100 text-asian-jade-800 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                  <span className="bg-brand-green-light text-brand-green-dark border border-brand-green-border text-[10px] font-bold px-2 py-0.5 rounded-full">
                     ADMIN
                   </span>
                 )}
@@ -149,7 +149,7 @@ export default function AccountPage() {
             {isAdmin && (
               <Link
                 href="/admin"
-                className="px-4 py-2 bg-asian-jade-600 hover:bg-asian-jade-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5"
+                className="px-4 py-2 bg-brand-green-base hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5"
               >
                 <ShieldCheck className="w-4 h-4" />
                 <span>Admin Dashboard</span>
@@ -171,7 +171,7 @@ export default function AccountPage() {
             onClick={() => setActiveTab('orders')}
             className={`pb-3 text-sm font-bold transition flex items-center gap-2 border-b-2 -mb-[2px] whitespace-nowrap ${
               activeTab === 'orders'
-                ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                ? 'border-[#FFBE26] text-[#2C2C2A]'
                 : 'border-transparent text-stone-500 hover:text-stone-800'
             }`}
           >
@@ -183,7 +183,7 @@ export default function AccountPage() {
             onClick={() => setActiveTab('addresses')}
             className={`pb-3 text-sm font-bold transition flex items-center gap-2 border-b-2 -mb-[2px] whitespace-nowrap ${
               activeTab === 'addresses'
-                ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                ? 'border-[#FFBE26] text-[#2C2C2A]'
                 : 'border-transparent text-stone-500 hover:text-stone-800'
             }`}
           >
@@ -195,7 +195,7 @@ export default function AccountPage() {
             onClick={() => setActiveTab('wishlist')}
             className={`pb-3 text-sm font-bold transition flex items-center gap-2 border-b-2 -mb-[2px] whitespace-nowrap ${
               activeTab === 'wishlist'
-                ? 'border-asian-terracotta-500 text-asian-terracotta-600'
+                ? 'border-[#FFBE26] text-[#2C2C2A]'
                 : 'border-transparent text-stone-500 hover:text-stone-800'
             }`}
           >
@@ -216,7 +216,7 @@ export default function AccountPage() {
                 </p>
                 <Link
                   href="/products"
-                  className="px-6 py-2.5 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white rounded-full text-xs font-bold transition"
+                  className="px-6 py-2.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black rounded-full text-xs transition"
                 >
                   Start Shopping
                 </Link>
@@ -264,7 +264,7 @@ export default function AccountPage() {
 
                       <div className="text-right">
                         <span className="text-xs text-stone-500 block">Total Amount</span>
-                        <span className="text-lg font-black text-asian-terracotta-600">
+                        <span className="text-lg font-black text-[#2C2C2A]">
                           {formatEUR(order.totalAmount)}
                         </span>
                       </div>
@@ -296,14 +296,14 @@ export default function AccountPage() {
 
                     <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-stone-500 gap-2 border-t border-stone-100">
                       <span className="flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-asian-terracotta-500" />
+                        <MapPin className="w-3.5 h-3.5 text-[#FFBE26]" />
                         <span>
                           Delivering to: {parsedAddr.addressLine1}, {parsedAddr.city}, Co. {parsedAddr.county} ({parsedAddr.eircode})
                         </span>
                       </span>
 
                       {order.trackingNumber && (
-                        <span className="font-bold text-asian-jade-700">
+                        <span className="font-bold text-brand-green-dark">
                           Tracking: {order.trackingNumber}
                         </span>
                       )}
@@ -322,7 +322,7 @@ export default function AccountPage() {
               <h3 className="text-base font-bold text-stone-900">Saved Irish Delivery Addresses</h3>
               <button
                 onClick={() => setShowAddressModal(true)}
-                className="px-4 py-2 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white font-bold text-xs rounded-xl shadow transition flex items-center gap-1.5"
+                className="px-4 py-2 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs rounded-xl shadow transition flex items-center gap-1.5"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add New Address</span>
@@ -339,7 +339,7 @@ export default function AccountPage() {
                     <div className="flex items-center justify-between mb-3">
                       <span className="font-bold text-sm text-stone-900">{addr.fullName}</span>
                       {addr.isDefault && (
-                        <span className="text-[10px] font-bold bg-asian-jade-50 text-asian-jade-700 px-2 py-0.5 rounded-full">
+                        <span className="text-[10px] font-bold bg-brand-green-light text-brand-green-dark border border-brand-green-border px-2 py-0.5 rounded-full">
                           Default
                         </span>
                       )}
@@ -459,7 +459,7 @@ export default function AccountPage() {
                       </button>
                       <button
                         type="submit"
-                        className="flex-1 py-2.5 text-xs font-bold text-white bg-asian-terracotta-500 rounded-xl"
+                        className="flex-1 py-2.5 text-xs font-black text-[#2C2C2A] bg-[#FFBE26] hover:bg-[#E5A30B] rounded-xl transition"
                       >
                         Save Address
                       </button>
@@ -483,7 +483,7 @@ export default function AccountPage() {
                 </p>
                 <Link
                   href="/products"
-                  className="px-6 py-2.5 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white rounded-full text-xs font-bold transition"
+                  className="px-6 py-2.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black rounded-full text-xs transition"
                 >
                   Explore Products
                 </Link>

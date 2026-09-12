@@ -40,7 +40,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FBF9F5]">
+    <div className="min-h-screen bg-[#F8F7F4]">
       {/* 1. Hero Slideshow + Curved/Wavy SVG Ribbon Transition + Brand Pillars Strip */}
       <HeroSlider />
 
@@ -51,22 +51,22 @@ export default function HomePage() {
       <CategoryGrid />
 
       {/* 4. Best Sellers Horizontal Grid with Photography-Forward Cards & Circular '+' Buttons */}
-      <section className="py-14 sm:py-16 bg-white border-t border-stone-200/80">
+      <section className="py-14 sm:py-16 bg-[#F8F7F4] border-t border-stone-200/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-asian-terracotta-600">
-                <Flame className="w-3.5 h-3.5 text-asian-terracotta-500" />
+              <div className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-brand-yellow-dark">
+                <Flame className="w-3.5 h-3.5 text-brand-yellow-base" />
                 <span>Popular in Irish Kitchens</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-stone-900 mt-1">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#2C2C2A] mt-1">
                 Best Sellers & Irish Favorites
               </h2>
             </div>
 
             <Link
               href="/products?bestSeller=true"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-asian-terracotta-600 hover:text-asian-terracotta-700 transition group"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2C2C2A] hover:text-black transition group"
             >
               <span>Explore All Best Sellers</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
@@ -76,7 +76,7 @@ export default function HomePage() {
           {loading ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {[...Array(8)].map((_, i) => (
-                <div key={i} className="animate-pulse bg-stone-100 rounded-3xl h-80" />
+                <div key={i} className="animate-pulse bg-stone-200/60 rounded-3xl h-80" />
               ))}
             </div>
           ) : (
@@ -94,22 +94,22 @@ export default function HomePage() {
 
       {/* 6. Featured Promotions / Deals Grid */}
       {featuredDeals.length > 0 && (
-        <section className="py-14 sm:py-16 bg-[#FBF9F5]">
+        <section className="py-14 sm:py-16 bg-[#F8F7F4] border-t border-stone-200/90">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
               <div>
-                <div className="inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-asian-jade-600">
-                  <Sparkles className="w-3.5 h-3.5 text-asian-jade-500" />
+                <div className="inline-flex items-center gap-1 text-xs font-black uppercase tracking-widest text-brand-green-dark">
+                  <Sparkles className="w-3.5 h-3.5 text-brand-green-base" />
                   <span>Curated Promotions</span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-black text-stone-900 mt-1">
+                <h2 className="text-2xl sm:text-3xl font-black text-[#2C2C2A] mt-1">
                   Limited-Time Specials
                 </h2>
               </div>
 
               <Link
                 href="/products?featured=true"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-asian-jade-600 hover:text-asian-jade-700 transition group"
+                className="inline-flex items-center gap-1 text-xs font-bold text-[#2C2C2A] hover:text-black transition group"
               >
                 <span>View All Specials</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />

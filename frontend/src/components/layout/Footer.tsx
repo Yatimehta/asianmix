@@ -30,18 +30,18 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#3D200B] text-stone-200">
+    <footer className="w-full bg-[#2C2C2A] text-stone-200">
       {/* 1. Accent Color Band Newsletter Signup */}
-      <div className="bg-gradient-to-r from-primary via-[#6B3E19] to-secondary py-10 px-4 sm:px-6 lg:px-8 text-white shadow-inner">
+      <div className="bg-[#222220] border-b border-stone-800 py-10 px-4 sm:px-6 lg:px-8 text-white shadow-inner">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="text-center lg:text-left space-y-1">
-            <span className="text-xs font-black uppercase tracking-widest text-accent-orange-border">
+            <span className="text-xs font-black uppercase tracking-widest text-brand-yellow-base">
               Exclusive Irish Shoppers Offer
             </span>
             <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
               Get 10% Off Your First Irish Grocery Order
             </h3>
-            <p className="text-xs sm:text-sm text-stone-100 max-w-lg font-medium opacity-90">
+            <p className="text-xs sm:text-sm text-stone-300 max-w-lg font-medium opacity-90">
               Join 12,000+ home cooks in Dublin, Cork, Galway & across Ireland. We send authentic pantry recipes and weekly flash deals.
             </p>
           </div>
@@ -55,19 +55,19 @@ export default function Footer() {
                   placeholder="Enter your email address..."
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full text-xs sm:text-sm px-4 py-3.5 rounded-2xl bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-4 focus:ring-primary/40 shadow-md font-medium"
+                  className="w-full text-xs sm:text-sm px-4 py-3.5 rounded-2xl bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-4 focus:ring-stone-400 shadow-md font-medium"
                 />
               </div>
               <button
                 type="submit"
-                className="px-6 py-3.5 bg-primary-dark hover:bg-black text-white font-black text-xs sm:text-sm rounded-2xl shadow-lg transition flex items-center justify-center gap-2 shrink-0 active:scale-95"
+                className="px-6 py-3.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs sm:text-sm rounded-2xl shadow-card transition flex items-center justify-center gap-2 shrink-0 active:scale-95"
               >
                 <span>Subscribe</span>
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4 text-[#2C2C2A]" />
               </button>
             </form>
             {subscribed && (
-              <p className="text-xs text-accent-orange-border font-bold mt-2 flex items-center justify-center lg:justify-start gap-1.5 animate-in fade-in">
+              <p className="text-xs text-brand-green-base font-bold mt-2 flex items-center justify-center lg:justify-start gap-1.5 animate-in fade-in">
                 <Check className="w-4 h-4" /> Welcome! Check your inbox for voucher code <strong>ASIAN10</strong>.
               </p>
             )}
@@ -113,7 +113,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-asian-terracotta-400 font-bold hover:underline">
+                <Link href="/products" className="text-[#FFBE26] font-black hover:underline">
                   View All 16 Aisles →
                 </Link>
               </li>
@@ -199,14 +199,14 @@ export default function Footer() {
             {/* App download badges */}
             <div className="flex flex-col gap-2">
               <div className="px-3.5 py-2 rounded-xl bg-stone-800 border border-stone-700 flex items-center gap-3">
-                <Smartphone className="w-5 h-5 text-asian-terracotta-400" />
+                <Smartphone className="w-5 h-5 text-[#FFBE26]" />
                 <div className="text-[10px]">
                   <span className="text-stone-400 block">Download on</span>
                   <span className="text-white font-bold text-xs">Apple App Store</span>
                 </div>
               </div>
               <div className="px-3.5 py-2 rounded-xl bg-stone-800 border border-stone-700 flex items-center gap-3">
-                <Smartphone className="w-5 h-5 text-asian-jade-400" />
+                <Smartphone className="w-5 h-5 text-brand-green-base" />
                 <div className="text-[10px]">
                   <span className="text-stone-400 block">Get it on</span>
                   <span className="text-white font-bold text-xs">Google Play Store</span>

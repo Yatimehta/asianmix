@@ -137,19 +137,19 @@ export default function CollectionsPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        {/* Page Title in warm primary brown with teal subtitle */}
-        <div className="mb-8 sm:mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-stone-100 pb-5">
+        {/* Page Title in neutral charcoal with teal subtitle */}
+        <div className="mb-8 sm:mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-stone-200/90 pb-5">
           <div>
-            <span className="text-xs font-black uppercase tracking-widest text-accent-teal">
+            <span className="text-xs font-black uppercase tracking-widest text-brand-teal-dark">
               Explore 16 Authentic Aisles
             </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mt-1">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#2C2C2A] mt-1">
               All Collections
             </h1>
           </div>
-          <p className="text-xs sm:text-sm text-stone-500 font-medium">
+          <p className="text-xs sm:text-sm text-stone-600 font-medium">
             Browse 450+ authentic Asian groceries imported directly to Cork for Irish kitchens
           </p>
         </div>
@@ -160,10 +160,10 @@ export default function CollectionsPage() {
             <Link
               key={col.handle}
               href={`/products?category=${col.handle}`}
-              className="group relative flex flex-col bg-white rounded-2xl overflow-hidden border border-stone-200/90 hover:border-primary/40 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group relative flex flex-col bg-white rounded-2xl overflow-hidden border border-stone-200/90 hover:border-stone-400/80 shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1"
             >
-              {/* Top Image Container: White with object-contain image */}
-              <div className="aspect-square w-full p-4 flex items-center justify-center bg-white overflow-hidden relative">
+              {/* Top Image Container: Neutral warm backdrop with object-contain image */}
+              <div className="aspect-square w-full p-4 flex items-center justify-center bg-gradient-to-b from-[#FAF9F7] to-[#F2F0EC] overflow-hidden relative">
                 {col.img ? (
                   <img
                     src={col.img}
@@ -178,17 +178,17 @@ export default function CollectionsPage() {
                 )}
               </div>
 
-              {/* Bottom Card Title Banner: Authentic Burgundy (#7A123A) with white uppercase title and arrow */}
-              <div className="bg-[#7A123A] p-4 flex-1 flex flex-col justify-between min-h-[96px] sm:min-h-[105px]">
-                <h3 className="text-white text-xs sm:text-sm font-bold uppercase tracking-tight leading-snug line-clamp-3">
+              {/* Bottom Card Title Banner: Neutral Charcoal (#2C2C2A) with white title and amber arrow */}
+              <div className="bg-[#2C2C2A] p-4 flex-1 flex flex-col justify-between min-h-[96px] sm:min-h-[105px]">
+                <h3 className="text-white text-xs sm:text-sm font-bold uppercase tracking-tight leading-snug line-clamp-3 group-hover:text-brand-yellow-base transition-colors">
                   {col.title}{' '}
-                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
+                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-1 text-brand-yellow-base">
                     →
                   </span>
                 </h3>
 
                 {col.caption && (
-                  <p className="text-white/70 text-[10px] mt-1 line-clamp-1 font-medium">
+                  <p className="text-stone-300 text-[10px] mt-1 line-clamp-1 font-medium">
                     {col.caption}
                   </p>
                 )}

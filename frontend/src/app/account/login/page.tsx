@@ -54,10 +54,10 @@ export default function LoginPage() {
     <div className="min-h-[80vh] bg-[#FBF9F5] flex items-center justify-center p-4 sm:p-6">
       <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-stone-200/80 shadow-xl space-y-6">
         <div className="text-center">
-          <div className="w-12 h-12 rounded-2xl bg-asian-terracotta-500 text-white font-bold text-2xl flex items-center justify-center mx-auto shadow-md mb-3">
+          <div className="w-12 h-12 rounded-2xl bg-[#FFBE26] text-[#2C2C2A] font-black text-2xl flex items-center justify-center mx-auto shadow-md mb-3">
             亞
           </div>
-          <h1 className="text-2xl font-black text-stone-900">Welcome Back</h1>
+          <h1 className="text-2xl font-black text-[#2C2C2A]">Welcome Back</h1>
           <p className="text-xs text-stone-500 mt-1">
             Sign in to track orders across Ireland and manage your saved addresses
           </p>
@@ -79,7 +79,7 @@ export default function LoginPage() {
                 placeholder="customer@example.ie"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
               />
               <Mail className="w-4 h-4 text-stone-400 absolute left-3.5 top-3.5" />
             </div>
@@ -94,7 +94,7 @@ export default function LoginPage() {
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                className="w-full text-xs p-3 pl-10 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
               />
               <Lock className="w-4 h-4 text-stone-400 absolute left-3.5 top-3.5" />
             </div>
@@ -103,7 +103,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2"
+            className="w-full py-3.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2"
           >
             <span>{loading ? 'Signing in...' : 'Sign In'}</span>
             <ArrowRight className="w-4 h-4" />
@@ -127,9 +127,9 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => handleDemoLogin('admin@asianmix.ie', 'admin123')}
-              className="py-2.5 px-3 bg-asian-jade-50 hover:bg-asian-jade-100 text-asian-jade-800 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1.5"
+              className="py-2.5 px-3 bg-brand-green-light hover:bg-brand-green-border text-brand-green-dark rounded-xl text-xs font-semibold transition flex items-center justify-center gap-1.5"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-asian-jade-600" />
+              <ShieldCheck className="w-3.5 h-3.5 text-brand-green-base" />
               <span>Admin Demo</span>
             </button>
           </div>
@@ -137,7 +137,7 @@ export default function LoginPage() {
 
         <div className="text-center text-xs text-stone-500">
           Don&apos;t have an account yet?{' '}
-          <Link href="/account/register" className="font-bold text-asian-terracotta-600 hover:underline">
+          <Link href="/account/register" className="font-bold text-[#2C2C2A] hover:underline">
             Register now
           </Link>
         </div>

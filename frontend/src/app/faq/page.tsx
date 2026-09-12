@@ -34,10 +34,10 @@ export default function FAQPage() {
     <div className="min-h-screen bg-[#FBF9F5] py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-asian-terracotta-600">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFBE26]/20 border border-[#FFBE26]/40 text-xs font-black uppercase tracking-widest text-[#2C2C2A]">
             Help & Information
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-stone-900">
+          <h1 className="text-3xl sm:text-4xl font-black text-[#2C2C2A]">
             Frequently Asked Questions
           </h1>
           <p className="text-sm text-stone-500 max-w-lg mx-auto">
@@ -51,8 +51,8 @@ export default function FAQPage() {
               key={idx}
               className="bg-white rounded-2xl p-6 border border-stone-200/80 shadow-sm space-y-2"
             >
-              <h3 className="text-base font-bold text-stone-900 flex items-start gap-2">
-                <HelpCircle className="w-5 h-5 text-asian-terracotta-500 shrink-0 mt-0.5" />
+              <h3 className="text-base font-bold text-[#2C2C2A] flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-[#FFBE26] shrink-0 mt-0.5" />
                 <span>{faq.q}</span>
               </h3>
               <p className="text-xs sm:text-sm text-stone-600 leading-relaxed pl-7">
@@ -62,14 +62,14 @@ export default function FAQPage() {
           ))}
         </div>
 
-        <div className="bg-asian-jade-50 rounded-3xl p-8 border border-asian-jade-200 text-center space-y-3">
-          <h3 className="text-lg font-bold text-asian-jade-900">Still have questions?</h3>
-          <p className="text-xs text-asian-jade-700 max-w-md mx-auto">
+        <div className="bg-[#2C2C2A] text-white rounded-3xl p-8 border border-[#3A3A38] text-center space-y-3">
+          <h3 className="text-lg font-bold text-white">Still have questions?</h3>
+          <p className="text-xs text-stone-300 max-w-md mx-auto">
             Our Cork support team is ready to help you with product queries, cooking recommendations, or custom delivery requests.
           </p>
           <Link
             href="/contact"
-            className="inline-block px-6 py-2.5 bg-asian-jade-600 hover:bg-asian-jade-700 text-white font-bold text-xs rounded-full shadow transition"
+            className="inline-block px-6 py-2.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs rounded-full shadow transition"
           >
             Contact Customer Support
           </Link>

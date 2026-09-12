@@ -24,10 +24,10 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#FBF9F5] py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-asian-terracotta-600">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFBE26]/20 border border-[#FFBE26]/40 text-xs font-black uppercase tracking-widest text-[#2C2C2A]">
             Get In Touch
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-stone-900">
+          <h1 className="text-3xl sm:text-4xl font-black text-[#2C2C2A]">
             Contact Asianmix Ireland
           </h1>
           <p className="text-sm text-stone-500 max-w-lg mx-auto">
@@ -43,7 +43,7 @@ export default function ContactPage() {
 
               <div className="space-y-4 text-xs text-stone-600">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-asian-terracotta-50 text-asian-terracotta-600 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-brand-yellow-light text-brand-yellow-dark flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-asian-jade-50 text-asian-jade-600 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-brand-green-light text-brand-green-dark flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-brand-teal-light text-brand-teal-dark flex items-center justify-center shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-stone-100 text-stone-700 flex items-center justify-center shrink-0">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
@@ -114,7 +114,7 @@ export default function ContactPage() {
                       placeholder="Sean Murphy"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full text-xs p-3 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                      className="w-full text-xs p-3 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
                     />
                   </div>
                   <div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                       placeholder="name@example.ie"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full text-xs p-3 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                      className="w-full text-xs p-3 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
                     />
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function ContactPage() {
                     placeholder="Order inquiry, ingredient recommendation, etc."
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
                   />
                 </div>
 
@@ -150,13 +150,13 @@ export default function ContactPage() {
                     placeholder="How can we help with your Asian grocery needs today?"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full text-xs p-3 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-asian-terracotta-500"
+                    className="w-full text-xs p-3 rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FFBE26]"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="px-6 py-3.5 bg-asian-terracotta-500 hover:bg-asian-terracotta-600 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition flex items-center gap-2"
+                  className="px-6 py-3.5 bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] font-black text-xs rounded-xl shadow-md hover:shadow-lg transition flex items-center gap-2"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Send Message</span>

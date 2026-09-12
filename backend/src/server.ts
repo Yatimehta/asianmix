@@ -12,11 +12,16 @@ import addressRoutes from './routes/address.routes';
 import adminRoutes from './routes/admin.routes';
 import uploadRoutes from './routes/upload.routes';
 import { errorHandler } from './middleware/error.middleware';
+import { apiLimiter, authLimiter } from './middleware/rateLimiter';
+import prisma from './config/prisma';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5001;
+
+// Trust reverse proxy (Nginx) for accurate IP resolution in rate limiting
+app.set('trust proxy', 1);
 
 // Middleware
 const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:3000,http://localhost:3001,https://asianmix.ie,https://www.asianmix.ie')
@@ -39,15 +44,33 @@ app.use(express.urlencoded({ extended: true }));
 // Serve uploaded files statically
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
-  res.json({
-    status: 'ok',
-    store: 'Asianmix Ireland Online Grocery',
-    timestamp: new Date().toISOString(),
-    version: '1.0.0',
-  });
+// Health check endpoint (exempt from rate limiting; verifies DB connection)
+app.get('/api/health', async (req, res) => {
+  try {
+    await prisma.$queryRaw`SELECT 1`;
+    res.json({
+      status: 'ok',
+      database: 'connected',
+      store: 'Asianmix Ireland Online Grocery',
+      timestamp: new Date().toISOString(),
+      version: '1.0.0',
+      uptimeSeconds: Math.floor(process.uptime()),
+      memoryUsageMb: Math.round(process.memoryUsage().rss / 1024 / 1024),
+    });
+  } catch (err: any) {
+    res.status(503).json({
+      status: 'error',
+      database: 'disconnected',
+      error: err?.message || 'Database ping failed',
+      timestamp: new Date().toISOString(),
+    });
+  }
 });
+
+// Apply Rate Limiters
+app.use('/api', apiLimiter);
+app.use('/api/auth/login', authLimiter);
+app.use('/api/auth/register', authLimiter);
 
 // Mount Routes
 app.use('/api/auth', authRoutes);

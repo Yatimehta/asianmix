@@ -8,10 +8,10 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Title */}
         <div className="text-center space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-asian-terracotta-600">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFBE26]/20 border border-[#FFBE26]/40 text-xs font-black uppercase tracking-widest text-[#2C2C2A]">
             Our Irish Asian Story
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-stone-900">
+          <h1 className="text-3xl sm:text-4xl font-black text-[#2C2C2A]">
             Connecting Ireland with the True Flavors of Asia
           </h1>
           <p className="text-sm text-stone-500 max-w-xl mx-auto">
@@ -41,20 +41,20 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-stone-100">
-            <div className="p-4 rounded-2xl bg-asian-terracotta-50/50 border border-asian-terracotta-100">
-              <Award className="w-6 h-6 text-asian-terracotta-600 mb-2" />
+            <div className="p-4 rounded-2xl bg-brand-yellow-light/50 border border-brand-yellow-border">
+              <Award className="w-6 h-6 text-brand-yellow-dark mb-2" />
               <h4 className="font-bold text-stone-900 text-sm">100% Authentic</h4>
               <p className="text-xs text-stone-500 mt-1">Directly sourced brands trusted by families across Asia.</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-asian-jade-50/50 border border-asian-jade-100">
-              <Truck className="w-6 h-6 text-asian-jade-600 mb-2" />
+            <div className="p-4 rounded-2xl bg-brand-green-light/50 border border-brand-green-border">
+              <Truck className="w-6 h-6 text-brand-green-dark mb-2" />
               <h4 className="font-bold text-stone-900 text-sm">All 32 Counties</h4>
               <p className="text-xs text-stone-500 mt-1">Nationwide courier delivery with free shipping over €50.</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-amber-50/50 border border-amber-100">
-              <HeartHandshake className="w-6 h-6 text-amber-600 mb-2" />
+            <div className="p-4 rounded-2xl bg-brand-teal-light/50 border border-brand-teal-border">
+              <HeartHandshake className="w-6 h-6 text-brand-teal-dark mb-2" />
               <h4 className="font-bold text-stone-900 text-sm">Eco Chilled Packaging</h4>
               <p className="text-xs text-stone-500 mt-1">Thermal ice gel packs keeping produce and dumplings fresh.</p>
             </div>

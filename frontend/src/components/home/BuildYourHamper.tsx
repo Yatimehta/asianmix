@@ -144,11 +144,11 @@ export default function BuildYourHamper() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-asian-terracotta-100 text-asian-terracotta-700 text-xs font-black uppercase tracking-wider mb-2">
-            <Gift className="w-3.5 h-3.5 text-asian-terracotta-600" />
-            <span>SIPPA Style Custom Box</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFBE26]/20 border border-[#FFBE26]/40 text-xs font-black text-[#2C2C2A] uppercase tracking-wider mb-2">
+            <Gift className="w-3.5 h-3.5 text-[#2C2C2A]" />
+            <span>Custom Box Builder</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-black text-stone-900 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-black text-[#2C2C2A] tracking-tight">
             Build Your Own Asian Pantry Hamper
           </h2>
           <p className="text-xs sm:text-sm text-stone-600 mt-2">
@@ -156,21 +156,21 @@ export default function BuildYourHamper() {
           </p>
         </div>
 
-        {/* 2-Column SIPPA "Mix-A-Pack" Card */}
+        {/* 2-Column "Mix-A-Pack" Card */}
         <div className="bg-white rounded-3xl border border-stone-300/80 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
           {/* Left Lifestyle Photo Card (5 cols) */}
-          <div className="lg:col-span-5 relative bg-asian-jade-900 text-white min-h-[320px] lg:min-h-[580px] p-8 sm:p-10 flex flex-col justify-between overflow-hidden">
+          <div className="lg:col-span-5 relative bg-[#2C2C2A] text-white min-h-[320px] lg:min-h-[580px] p-8 sm:p-10 flex flex-col justify-between overflow-hidden">
             {/* Background image */}
             <img
               src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85"
               alt="Gourmet Asian Hamper"
               className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-overlay"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-asian-jade-950 via-asian-jade-900/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1E] via-[#2C2C2A]/85 to-transparent" />
 
             {/* Top Pill */}
             <div className="relative z-10">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-asian-mustard-400 text-stone-900 font-extrabold text-xs shadow-md">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FFBE26] text-[#2C2C2A] font-extrabold text-xs shadow-md">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>The Irish Chef&apos;s Selection</span>
               </span>
@@ -178,7 +178,7 @@ export default function BuildYourHamper() {
 
             {/* Center / Bottom copy */}
             <div className="relative z-10 space-y-3 my-auto pt-8">
-              <h3 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight">
+              <h3 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight text-white">
                 Authentic Asian Flavors, Handpicked by You
               </h3>
               <p className="text-xs sm:text-sm text-stone-200 leading-relaxed max-w-sm font-medium">
@@ -187,15 +187,15 @@ export default function BuildYourHamper() {
 
               <div className="pt-2 space-y-1.5 text-xs text-stone-300 font-semibold">
                 <p className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-asian-mustard-400" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFBE26]" />
                   <span>Choose any combination of 4 to 6 items</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-asian-mustard-400" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFBE26]" />
                   <span>Save 10% on monthly replenishment subscription</span>
                 </p>
                 <p className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-asian-mustard-400" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFBE26]" />
                   <span>Free delivery across Ireland over €50</span>
                 </p>
               </div>
@@ -204,7 +204,7 @@ export default function BuildYourHamper() {
             {/* Bottom summary badge */}
             <div className="relative z-10 pt-4 border-t border-white/20 flex items-center justify-between text-xs">
               <span className="text-stone-300 font-medium">Hamper Items Selected:</span>
-              <span className="font-extrabold text-white text-sm bg-white/20 px-3 py-1 rounded-full">
+              <span className="font-extrabold text-[#2C2C2A] text-sm bg-[#FFBE26] px-3 py-1 rounded-full">
                 {totalItemCount} {totalItemCount === 1 ? 'item' : 'items'}
               </span>
             </div>
@@ -214,10 +214,10 @@ export default function BuildYourHamper() {
           <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-6">
             <div>
               <div className="flex items-center justify-between pb-3 border-b border-stone-200">
-                <h4 className="text-sm font-black text-stone-900 uppercase tracking-wider">
+                <h4 className="text-sm font-black text-[#2C2C2A] uppercase tracking-wider">
                   Select Your Items
                 </h4>
-                <span className="text-xs font-bold text-asian-terracotta-600">
+                <span className="text-xs font-bold text-brand-yellow-dark bg-brand-yellow-light border border-brand-yellow-border px-2.5 py-0.5 rounded-full">
                   {totalItemCount} selected
                 </span>
               </div>
@@ -237,7 +237,7 @@ export default function BuildYourHamper() {
                           {item.name}
                         </p>
                         <p className="text-[11px] text-stone-400">{item.weight}</p>
-                        <p className="text-xs font-black text-asian-terracotta-600 mt-0.5">
+                        <p className="text-xs font-black text-[#2C2C2A] mt-0.5">
                           {formatEUR(item.price)}
                         </p>
                       </div>
@@ -275,7 +275,7 @@ export default function BuildYourHamper() {
                 onClick={() => setPurchaseType('onetime')}
                 className={`p-2.5 rounded-xl border flex items-center justify-between cursor-pointer transition text-xs ${
                   purchaseType === 'onetime'
-                    ? 'bg-white border-asian-terracotta-500 shadow-sm font-bold text-stone-900'
+                    ? 'bg-white border-[#2C2C2A] shadow-sm font-bold text-[#2C2C2A]'
                     : 'border-transparent text-stone-600 hover:bg-white/60'
                 }`}
               >
@@ -285,18 +285,18 @@ export default function BuildYourHamper() {
                     name="hamperPurchase"
                     checked={purchaseType === 'onetime'}
                     onChange={() => setPurchaseType('onetime')}
-                    className="text-asian-terracotta-500"
+                    className="accent-[#2C2C2A]"
                   />
                   <span>One-time purchase</span>
                 </div>
-                <span className="font-bold">{formatEUR(rawSubtotal)}</span>
+                <span className="font-bold text-[#2C2C2A]">{formatEUR(rawSubtotal)}</span>
               </label>
 
               <label
                 onClick={() => setPurchaseType('subscribe')}
                 className={`p-2.5 rounded-xl border flex items-center justify-between cursor-pointer transition text-xs ${
                   purchaseType === 'subscribe'
-                    ? 'bg-asian-jade-50 border-asian-jade-600 shadow-sm font-bold text-asian-jade-900'
+                    ? 'bg-brand-green-light/40 border-brand-green-base shadow-sm font-bold text-brand-green-dark'
                     : 'border-transparent text-stone-600 hover:bg-white/60'
                 }`}
               >
@@ -306,15 +306,15 @@ export default function BuildYourHamper() {
                     name="hamperPurchase"
                     checked={purchaseType === 'subscribe'}
                     onChange={() => setPurchaseType('subscribe')}
-                    className="text-asian-jade-600"
+                    className="accent-brand-green-base"
                   />
                   <span className="flex items-center gap-1.5">
-                    <RefreshCw className="w-3.5 h-3.5 text-asian-jade-600" />
+                    <RefreshCw className="w-3.5 h-3.5 text-brand-green-base" />
                     <span>Subscribe & save 10%</span>
                   </span>
                 </div>
                 <div className="text-right">
-                  <span className="font-black text-asian-jade-700">
+                  <span className="font-black text-brand-green-dark">
                     {formatEUR(rawSubtotal * 0.9)}
                   </span>
                   <span className="text-[10px] text-stone-400 block line-through">
@@ -328,11 +328,11 @@ export default function BuildYourHamper() {
             <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <span className="text-xs text-stone-500 block">Hamper Subtotal:</span>
-                <span className="text-2xl font-black text-stone-900">
+                <span className="text-2xl font-black text-[#2C2C2A]">
                   {formatEUR(finalSubtotal)}
                 </span>
                 {purchaseType === 'subscribe' && (
-                  <span className="text-[10px] text-asian-jade-600 font-bold block">
+                  <span className="text-[10px] text-brand-green-dark font-bold block">
                     ✓ 10% recurring discount applied
                   </span>
                 )}
@@ -341,12 +341,12 @@ export default function BuildYourHamper() {
               <button
                 onClick={handleAddHamper}
                 disabled={totalItemCount === 0 || isAdding}
-                className={`py-3.5 px-6 rounded-2xl font-bold text-xs sm:text-sm text-white shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 ${
+                className={`py-3.5 px-6 rounded-2xl font-black text-xs sm:text-sm shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 ${
                   addedSuccess
-                    ? 'bg-asian-jade-600'
+                    ? 'bg-brand-green-base text-white'
                     : totalItemCount === 0
                     ? 'bg-stone-300 cursor-not-allowed text-stone-500'
-                    : 'bg-asian-terracotta-500 hover:bg-asian-terracotta-600 active:scale-95'
+                    : 'bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] active:scale-95'
                 }`}
               >
                 {addedSuccess ? (

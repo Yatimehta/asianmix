@@ -12,70 +12,82 @@ interface CategoryGridProps {
 const DEFAULT_CATEGORIES = [
   {
     slug: 'snacks-kerala-and-north-indian',
-    name: 'Snacks & Kerala Specialties',
+    name: 'Snacks & Delicacies',
+    groupName: 'Snacks & Crunch',
     description: 'Crispy banana chips, murukku, mixtures, savory & sweet crunch',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/SweetCheeda.jpg?v=1700595967',
     icon: Sparkles,
-    color: 'from-amber-600/80 to-asian-terracotta-700/90',
+    groupBadge: 'bg-brand-yellow-light text-brand-yellow-dark border-brand-yellow-border',
+    color: 'from-[#2C2C2A]/95 via-[#8A5800]/40 to-transparent',
   },
   {
     slug: 'spices-whole-spice-powder-and-masalas',
     name: 'Whole Spices & Masalas',
+    groupName: 'Spices & Seasonings',
     description: 'Chilli, coriander, turmeric powder, garam masala & whole spices',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6802.jpg?v=1626047789',
     icon: Flame,
-    color: 'from-yellow-600/80 to-asian-terracotta-700/90',
+    groupBadge: 'bg-brand-red-light text-brand-red-dark border-brand-red-border',
+    color: 'from-[#2C2C2A]/95 via-[#961B0E]/40 to-transparent',
   },
   {
     slug: 'fresh-and-frozen-vegetables',
-    name: 'Fresh Vegetables',
+    name: 'Fresh Produce',
+    groupName: 'Cold-Chain Fresh',
     description: 'Authentic Indian gourds, okra, fresh ginger, leaves & roots',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Greenchilli.jpg?v=1701202606',
     icon: Leaf,
-    color: 'from-asian-jade-600/80 to-emerald-800/90',
+    groupBadge: 'bg-brand-green-light text-brand-green-dark border-brand-green-border',
+    color: 'from-[#2C2C2A]/95 via-[#2B530E]/40 to-transparent',
   },
   {
     slug: 'rice-and-grains',
-    name: 'Rice & Atta (Flour)',
+    name: 'Rice & Grains',
+    groupName: 'Pantry Essentials',
     description: 'Matta rice, Basmati rice, premium Chakki fresh wheat flour',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Pavizhammatta.jpg?v=1700683462',
     icon: Utensils,
-    color: 'from-asian-terracotta-600/80 to-amber-700/90',
+    groupBadge: 'bg-brand-red-light text-brand-red-dark border-brand-red-border',
+    color: 'from-[#2C2C2A]/95 via-[#961B0E]/40 to-transparent',
   },
   {
     slug: 'pickles-and-paste',
-    name: 'Pickles, Pastes & Bottle Food',
+    name: 'Sauces & Condiments',
+    groupName: 'Sauces & Pastes',
     description: 'Kerala mango & lime pickles, ginger-garlic pastes, chutney bases',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/IMG_6808.jpg?v=1700684129',
     icon: ShoppingBag,
-    color: 'from-rose-600/80 to-pink-700/90',
+    groupBadge: 'bg-brand-teal-light text-brand-teal-dark border-brand-teal-border',
+    color: 'from-[#2C2C2A]/95 via-[#095764]/40 to-transparent',
   },
   {
     slug: 'drinks',
     name: 'Drinks & Beverages',
+    groupName: 'Beverages',
     description: 'Frooti, Maaza mango drinks, Basil seed juice & authentic milk mixes',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/download.jpg?v=1718267006',
     icon: Coffee,
-    color: 'from-teal-600/80 to-asian-jade-800/90',
+    groupBadge: 'bg-brand-teal-light text-brand-teal-dark border-brand-teal-border',
+    color: 'from-[#2C2C2A]/95 via-[#095764]/40 to-transparent',
   },
 ];
 
 export default function CategoryGrid({ categories }: CategoryGridProps) {
   return (
-    <section className="py-16 bg-[#FBF9F5]">
+    <section className="py-16 bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-asian-terracotta-600">
+            <span className="text-xs font-bold uppercase tracking-widest text-stone-500">
               Browse Our Aisles
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-stone-900 mt-1">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#2C2C2A] mt-1">
               Explore Popular Categories
             </h2>
           </div>
           <Link
             href="/products"
-            className="inline-flex items-center gap-1 text-xs font-bold text-asian-terracotta-600 hover:text-asian-terracotta-700 group transition"
+            className="inline-flex items-center gap-1 text-xs font-bold text-[#2C2C2A] hover:text-black group transition"
           >
             <span>View All Aisles</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
@@ -89,7 +101,7 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
               <Link
                 key={cat.slug}
                 href={`/products?category=${cat.slug}`}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-white border border-stone-200/80 flex flex-col h-64"
+                className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1 bg-white border border-stone-200/90 hover:border-stone-400/80 flex flex-col h-64"
               >
                 {/* Image */}
                 <div className="relative w-full h-full">
@@ -98,20 +110,25 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
                     alt={cat.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} opacity-75 group-hover:opacity-85 transition-opacity`} />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} opacity-85 group-hover:opacity-95 transition-opacity`} />
                 </div>
 
                 {/* Content Overlay */}
                 <div className="absolute inset-0 p-4 flex flex-col justify-between text-white z-10">
-                  <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
-                    <Icon className="w-5 h-5 text-white" />
+                  <div className="flex items-center justify-between">
+                    <div className="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
+                      <Icon className="w-4 h-4 text-white" />
+                    </div>
+                    <span className={`text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full border ${cat.groupBadge}`}>
+                      {cat.groupName}
+                    </span>
                   </div>
 
                   <div>
-                    <h3 className="text-sm sm:text-base font-black leading-tight group-hover:text-asian-mustard-300 transition">
+                    <h3 className="text-sm sm:text-base font-black leading-tight text-white group-hover:text-stone-100 transition">
                       {cat.name}
                     </h3>
-                    <p className="text-[11px] text-stone-200 line-clamp-2 mt-1 hidden sm:block opacity-90">
+                    <p className="text-[11px] text-stone-300 line-clamp-2 mt-1 hidden sm:block opacity-90">
                       {cat.description}
                     </p>
                   </div>

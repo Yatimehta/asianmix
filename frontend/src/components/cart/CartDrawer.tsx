@@ -35,7 +35,7 @@ export default function CartDrawer() {
           {/* Header */}
           <div className="p-4 sm:p-6 border-b border-stone-100 flex items-center justify-between bg-stone-50">
             <div className="flex items-center gap-2">
-              <ShoppingBag className="w-5 h-5 text-asian-terracotta-500" />
+              <ShoppingBag className="w-5 h-5 text-[#2C2C2A]" />
               <h2 className="text-lg font-bold text-stone-900">Your Basket ({itemCount})</h2>
             </div>
             <button
@@ -48,23 +48,23 @@ export default function CartDrawer() {
           </div>
 
           {/* Free Shipping Progress for Ireland */}
-          <div className="bg-accent-teal-light p-4 border-b border-accent-teal-border/40">
+          <div className="bg-brand-teal-light p-4 border-b border-brand-teal-border">
             <div className="flex items-center justify-between text-xs font-semibold text-stone-800 mb-1.5">
               <span className="flex items-center gap-1.5">
-                <Truck className="w-4 h-4 text-accent-teal" />
+                <Truck className="w-4 h-4 text-brand-teal-dark" />
                 {amountNeededForFreeShipping > 0 ? (
                   <>
-                    Add <strong className="text-primary">{formatEUR(amountNeededForFreeShipping)}</strong> for <strong className="text-accent-teal">FREE Ireland Delivery</strong>
+                    Add <strong className="text-brand-brown">{formatEUR(amountNeededForFreeShipping)}</strong> for <strong className="text-brand-teal-dark">FREE Ireland Delivery</strong>
                   </>
                 ) : (
-                  <span className="text-accent-green font-bold">🎉 You qualify for FREE Delivery in Ireland!</span>
+                  <span className="text-brand-green-dark font-bold">🎉 You qualify for FREE Delivery in Ireland!</span>
                 )}
               </span>
-              <span className="font-bold text-accent-teal">{freeShippingProgress}%</span>
+              <span className="font-bold text-brand-teal-dark">{freeShippingProgress}%</span>
             </div>
-            <div className="w-full bg-stone-200 h-2 rounded-full overflow-hidden">
+            <div className="w-full bg-[#EFE8DE] h-2 rounded-full overflow-hidden">
               <div
-                className="bg-gradient-to-r from-primary via-[#6B3E19] to-accent-green h-full rounded-full transition-all duration-500"
+                className="bg-brand-green-base h-full rounded-full transition-all duration-500"
                 style={{ width: `${freeShippingProgress}%` }}
               />
             </div>
@@ -158,24 +158,24 @@ export default function CartDrawer() {
 
               <div className="pt-2 border-t border-stone-200 flex justify-between items-baseline">
                 <span className="text-sm font-bold text-stone-900">Total</span>
-                <span className="text-xl font-black text-primary">{formatEUR(subtotal)}</span>
+                <span className="text-xl font-black text-stone-900">{formatEUR(subtotal)}</span>
               </div>
 
               <div className="grid grid-cols-2 gap-2">
                 <Link
                   href="/cart"
                   onClick={closeCart}
-                  className="w-full text-center py-2.5 px-4 rounded-xl border border-stone-300 bg-white text-xs font-bold text-stone-700 hover:bg-stone-100 transition"
+                  className="w-full text-center py-2.5 px-4 rounded-xl border border-stone-300 bg-white text-xs font-bold text-stone-700 hover:bg-stone-50 transition"
                 >
                   View Basket
                 </Link>
                 <Link
                   href="/checkout"
                   onClick={closeCart}
-                  className="w-full text-center py-2.5 px-4 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold shadow-md hover:shadow transition flex items-center justify-center gap-1.5"
+                  className="w-full text-center py-2.5 px-4 rounded-xl bg-[#FFBE26] hover:bg-[#E5A30B] text-[#2C2C2A] text-xs font-black shadow-card transition flex items-center justify-center gap-1.5"
                 >
                   <span>Checkout</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#2C2C2A]" />
                 </Link>
               </div>
 

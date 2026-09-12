@@ -184,7 +184,7 @@ export default function Header() {
                 className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-100 hover:bg-stone-200/70 border border-stone-200 text-left transition text-xs"
                 title="Change delivery location"
               >
-                <MapPin className="w-3.5 h-3.5 text-[#7A123A]" />
+                <MapPin className="w-3.5 h-3.5 text-brand-teal-dark" />
                 <span className="font-semibold text-stone-700 truncate max-w-[100px]">{deliveryLocation}</span>
                 <ChevronDown className="w-3 h-3 text-stone-400" />
               </button>
@@ -195,7 +195,7 @@ export default function Header() {
                   <div>
                     <button
                       onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-                      className="p-2 rounded-full text-stone-700 hover:text-[#7A123A] hover:bg-stone-100 transition flex items-center gap-1"
+                      className="p-2 rounded-full text-stone-700 hover:text-charcoal-dark hover:bg-stone-100 transition flex items-center gap-1"
                       aria-label="User Account"
                     >
                       <UserIcon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
@@ -211,7 +211,7 @@ export default function Header() {
                           <Link
                             href="/admin"
                             onClick={() => setUserDropdownOpen(false)}
-                            className="flex items-center gap-2 px-4 py-2 text-xs text-[#7A123A] font-bold hover:bg-stone-50 transition"
+                            className="flex items-center gap-2 px-4 py-2 text-xs text-brand-teal-dark font-bold hover:bg-stone-50 transition"
                           >
                             <ShieldCheck className="w-4 h-4" /> Admin Dashboard
                           </Link>
@@ -238,7 +238,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href="/account/login"
-                    className="p-2 rounded-full text-stone-700 hover:text-primary hover:bg-stone-100 transition block"
+                    className="p-2 rounded-full text-stone-700 hover:text-charcoal-dark hover:bg-stone-100 transition block"
                     aria-label="Sign In"
                     title="Account Login"
                   >
@@ -250,13 +250,13 @@ export default function Header() {
               {/* Wishlist / Save For Later */}
               <Link
                 href="/wishlist"
-                className="relative p-2 rounded-full text-stone-700 hover:text-primary hover:bg-stone-100 transition block"
+                className="relative p-2 rounded-full text-stone-700 hover:text-charcoal-dark hover:bg-stone-100 transition block"
                 aria-label="Wishlist"
                 title="Saved Items"
               >
                 <Heart className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
                 {wishlistCount > 0 && (
-                  <span className="absolute top-0.5 right-0.5 bg-accent-orange text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-white shadow-sm">
+                  <span className="absolute top-0.5 right-0.5 bg-brand-yellow-base text-brand-yellow-dark text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-white shadow-xs">
                     {wishlistCount}
                   </span>
                 )}
@@ -265,13 +265,13 @@ export default function Header() {
               {/* Shopping Bag / Cart */}
               <button
                 onClick={openCart}
-                className="relative p-2 rounded-full text-stone-700 hover:text-primary hover:bg-stone-100 transition"
+                className="relative p-2 rounded-full text-stone-700 hover:text-charcoal-dark hover:bg-stone-100 transition"
                 aria-label="Shopping Bag"
                 title="View Basket"
               >
                 <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
                 {itemCount > 0 && (
-                  <span className="absolute top-0.5 right-0.5 bg-primary text-white text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border-2 border-white shadow-sm">
+                  <span className="absolute top-0.5 right-0.5 bg-[#FFBE26] text-[#2C2C2A] text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center border-2 border-white shadow-xs">
                     {itemCount}
                   </span>
                 )}
