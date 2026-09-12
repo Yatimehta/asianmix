@@ -67,10 +67,8 @@ app.get('/api/health', async (req, res) => {
   }
 });
 
-// Apply Rate Limiters
+// Apply Rate Limiter
 app.use('/api', apiLimiter);
-app.use('/api/auth/login', authLimiter);
-app.use('/api/auth/register', authLimiter);
 
 // Mount Routes
 app.use('/api/auth', authRoutes);
