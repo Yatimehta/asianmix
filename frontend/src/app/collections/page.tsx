@@ -10,37 +10,37 @@ const FALLBACK_COLLECTIONS = [
   {
     handle: 'biriyani-essential',
     title: 'BASMATI /BIRIYANI/JEERAKASALA/MANTHI RICE& ESSENTIAL',
-    img: 'https://asianmix.ie/cdn/shop/files/Indiangatebasmati.jpg?v=1700756384&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Indiangatebasmati.jpg?v=1700756384',
     caption: 'RICE & INGREDIENT THATS ENHANCE THE FLAVOUR',
   },
   {
     handle: 'beans',
     title: 'Beans, Peas, Lentils and Grams',
-    img: 'https://asianmix.ie/cdn/shop/collections/Peas_lentils_beans.jpg?v=1704227200&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/collections/Peas_lentils_beans.jpg?v=1704227200',
     caption: '',
   },
   {
     handle: 'classic-collection-and-over-the-counter',
     title: 'CLASSIC COLLECTION AND OVER THE COUNTER',
-    img: 'https://asianmix.ie/cdn/shop/files/Bournvita.jpg?v=1701538806&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Bournvita.jpg?v=1701538806',
     caption: '',
   },
   {
     handle: 'drinks',
     title: 'Drinks',
-    img: 'https://asianmix.ie/cdn/shop/files/download.jpg?v=1718267006&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/download.jpg?v=1718267006',
     caption: '',
   },
   {
     handle: 'fresh-and-frozen-vegetables',
     title: 'Fresh vegetables',
-    img: 'https://asianmix.ie/cdn/shop/files/Greenchilli.jpg?v=1701202606&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Greenchilli.jpg?v=1701202606',
     caption: '',
   },
   {
     handle: 'ghee-oil-and-payasam-product',
     title: 'GHEE ,OIL AND DESSERT PRODUCT',
-    img: 'https://asianmix.ie/cdn/shop/products/IMG_E6848.jpg?v=1626133901&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6848.jpg?v=1626133901',
     caption: '',
   },
   {
@@ -58,13 +58,13 @@ const FALLBACK_COLLECTIONS = [
   {
     handle: 'personal-care-products',
     title: 'Personal care products',
-    img: 'https://asianmix.ie/cdn/shop/products/IMG_E6849.jpg?v=1626133903&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6849.jpg?v=1626133903',
     caption: '',
   },
   {
     handle: 'phillipino-product-snacks',
     title: 'PHILLIPINO PRODUCT& SNACKS',
-    img: 'https://asianmix.ie/cdn/shop/products/WhatsApp_Image_2021-08-30_at_3.36.34_PM_1.jpg?v=1630356343&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/WhatsApp_Image_2021-08-30_at_3.36.34_PM_1.jpg?v=1630356343',
     caption: 'snacks, drink, seasoning ,rice, noodles and sauce',
   },
   {
@@ -76,31 +76,31 @@ const FALLBACK_COLLECTIONS = [
   {
     handle: 'rice-and-grains',
     title: 'RICE AND ATTA(Wheat Flour)',
-    img: 'https://asianmix.ie/cdn/shop/files/Pavizhammatta.jpg?v=1700683462&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Pavizhammatta.jpg?v=1700683462',
     caption: 'MATTA RICE, BASMATI RICE, JEERAKASALA RICE, RAW RICE, IDLI RICE, WHEAT FLOUR',
   },
   {
     handle: 'all-flour-1',
     title: 'RICE POWDERS, RAVA & AND ALL FLOUR',
-    img: 'https://asianmix.ie/cdn/shop/products/IMG_E6967.jpg?v=1626047841&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6967.jpg?v=1626047841',
     caption: 'RICE, WHEAT, SEMOLINA (RAVA) AND FLOURS',
   },
   {
     handle: 'rusk-biscuts-swet-and-dates',
     title: 'RUSK,BISCUTS,SWEET AND CAKE',
-    img: 'https://asianmix.ie/cdn/shop/files/SoanPapdi.jpg?v=1700593680&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/SoanPapdi.jpg?v=1700593680',
     caption: '',
   },
   {
     handle: 'snacks-kerala-and-north-indian',
     title: 'SNACKS (KERALA AND NORTH INDIAN)',
-    img: 'https://asianmix.ie/cdn/shop/files/SweetCheeda.jpg?v=1700595967&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/SweetCheeda.jpg?v=1700595967',
     caption: 'PRE PACKED DELICIOUS SNACKS INCLUDING CHIPS, MIXTURES, MURUKKU AND MORE',
   },
   {
     handle: 'spices-whole-spice-powder-and-masalas',
     title: 'WHOLE SPICES,SPICE POWDER AND MASALAS',
-    img: 'https://asianmix.ie/cdn/shop/products/IMG_E6802.jpg?v=1626047789&width=1500',
+    img: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6802.jpg?v=1626047789',
     caption: 'WHOLE SPICES, CHILLI POWDER, CORIANDER POWDER, TURMERIC POWDER AND COOKING MASALAS',
   },
 ];

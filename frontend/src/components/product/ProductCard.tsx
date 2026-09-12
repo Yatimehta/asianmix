@@ -35,7 +35,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const mainImage = product.images && product.images.length > 0 && product.images[0]
     ? product.images[0]
-    : (product.category?.image || 'https://asianmix.ie/cdn/shop/files/Indiangatebasmati.jpg?v=1700756384&width=600');
+    : (product.category?.image || 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Indiangatebasmati.jpg?v=1700756384');
 
   const discountPercent = product.compareAtPrice && product.compareAtPrice > product.price
     ? Math.round(((product.compareAtPrice - product.price) / product.compareAtPrice) * 100)

@@ -83,10 +83,29 @@ async function main() {
   console.log(`📁 Creating ${collectionsRaw.length} real categories from asianmix.ie navigation/collections...`);
   const categoryDbMap: Record<string, any> = {}; // handle -> Category DB record
 
+  const categoryImages: Record<string, string> = {
+    'biriyani-essential': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Indiangatebasmati.jpg?v=1700756384',
+    'beans': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/collections/Peas_lentils_beans.jpg?v=1704227200',
+    'classic-collection-and-over-the-counter': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Bournvita.jpg?v=1701538806',
+    'drinks': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/download.jpg?v=1718267006',
+    'fresh-and-frozen-vegetables': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Greenchilli.jpg?v=1701202606',
+    'ghee-oil-and-payasam-product': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6848.jpg?v=1626133901',
+    'maggi-products': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6983.jpg?v=1626047863',
+    'nuts-and-dates': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/5db73d34-bdde-447e-b868-d8e7ec1383d6.webp?v=1717845939',
+    'personal-care-products': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6849.jpg?v=1626133903',
+    'phillipino-product-snacks': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/WhatsApp_Image_2021-08-30_at_3.36.34_PM_1.jpg?v=1630356343',
+    'pickles-and-paste': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/IMG_6808.jpg?v=1700684129',
+    'rice-and-grains': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Pavizhammatta.jpg?v=1700683462',
+    'all-flour-1': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6967.jpg?v=1626047841',
+    'rusk-biscuts-swet-and-dates': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/SoanPapdi.jpg?v=1700593680',
+    'snacks-kerala-and-north-indian': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/SweetCheeda.jpg?v=1700595967',
+    'spices-whole-spice-powder-and-masalas': 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6802.jpg?v=1626047789',
+  };
+
   let orderIdx = 1;
   for (const col of collectionsRaw) {
     const cleanDesc = cleanHtml(col.description) || null;
-    const catImage = col.image && col.image.src ? col.image.src : null;
+    const catImage = (col.image && col.image.src) || categoryImages[col.handle] || null;
 
     const created = await prisma.category.create({
       data: {
@@ -245,7 +264,10 @@ async function main() {
         : null;
 
       const cleanDesc = cleanHtml(p.body_html);
-      const imageUrls = (p.images || []).map((img: any) => img.src);
+      let imageUrls = (p.images || []).map((img: any) => img.src).filter(Boolean);
+      if (imageUrls.length === 0 && category.image) {
+        imageUrls = [category.image];
+      }
 
       // Weight from variant title or grams
       let weight: string | null = null;
