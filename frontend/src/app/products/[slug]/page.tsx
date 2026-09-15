@@ -19,6 +19,7 @@ import {
   Send
 } from 'lucide-react';
 import { fetchApi, formatEUR } from '@/lib/api';
+import { normalizeImageUrl, FALLBACK_PRODUCT_IMAGE } from '@/lib/image';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
 import { useAuth } from '@/context/AuthContext';
@@ -60,7 +61,7 @@ export default function ProductDetailPage() {
         if (res.success && res.product) {
           setProduct(res.product);
           if (res.product.images && res.product.images.length > 0) {
-            setSelectedImage(res.product.images[0]);
+            setSelectedImage(normalizeImageUrl(res.product.images[0]));
           }
           setRelated(res.related || []);
         }
@@ -185,17 +186,16 @@ export default function ProductDetailPage() {
       )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-stone-500 mb-6">
-          <Link href="/" className="hover:text-primary">Home</Link>
-          <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
-          <Link href="/collections" className="hover:text-primary">Aisles</Link>
-          <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
+        <nav className="flex items-center gap-2 text-xs text-stone-500 mb-6 flex-wrap">
+          <Link href="/" className="hover:text-primary transition">Home</Link>
+          <ChevronRight className="w-3 h-3 text-stone-400" />
+          <Link href="/products" className="hover:text-primary transition">Groceries</Link>
           {product.category && (
             <>
-              <Link href={`/products?category=${product.category.slug}`} className="hover:text-primary">
+              <ChevronRight className="w-3 h-3 text-stone-400" />
+              <Link href={`/products?category=${product.category.slug}`} className="hover:text-primary transition">
                 {product.category.name}
               </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
             </>
           )}
           <span className="text-stone-800 font-semibold truncate max-w-xs">{product.name}</span>
@@ -209,9 +209,12 @@ export default function ProductDetailPage() {
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#5C3415_1px,transparent_1px)] [background-size:12px_12px] pointer-events-none" />
               {selectedImage ? (
                 <img
-                  src={selectedImage}
+                  src={normalizeImageUrl(selectedImage)}
                   alt={product.name}
                   className="max-h-full max-w-full object-contain filter drop-shadow-md"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = FALLBACK_PRODUCT_IMAGE;
+                  }}
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-stone-400 font-bold">
@@ -226,14 +229,21 @@ export default function ProductDetailPage() {
                 {product.images.map((img, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setSelectedImage(img)}
+                    onClick={() => setSelectedImage(normalizeImageUrl(img))}
                     className={`w-18 h-18 rounded-xl overflow-hidden border-2 transition shrink-0 ${
-                      selectedImage === img
+                      selectedImage === normalizeImageUrl(img)
                         ? 'border-primary shadow'
                         : 'border-stone-200 opacity-70 hover:opacity-100'
                     }`}
                   >
-                    <img src={img} alt={`${product.name} ${idx + 1}`} className="w-16 h-16 object-cover" />
+                    <img
+                      src={normalizeImageUrl(img)}
+                      alt={`${product.name} ${idx + 1}`}
+                      className="w-16 h-16 object-cover"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = FALLBACK_PRODUCT_IMAGE;
+                      }}
+                    />
                   </button>
                 ))}
               </div>

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { ArrowRight, Flame, Sparkles } from 'lucide-react';
 import HeroSlider from '@/components/home/HeroSlider';
 import DealsRow from '@/components/home/DealsRow';
@@ -10,7 +11,6 @@ import ProductCard from '@/components/product/ProductCard';
 import BuildYourHamper from '@/components/home/BuildYourHamper';
 import IrelandBanner from '@/components/home/IrelandBanner';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
-import SocialFeed from '@/components/home/SocialFeed';
 import { fetchApi } from '@/lib/api';
 import { Product } from '@/types';
 
@@ -20,6 +20,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
     const loadHomeData = async () => {
       try {
         const [bsRes, featRes] = await Promise.all([
@@ -27,16 +28,21 @@ export default function HomePage() {
           fetchApi('/products?featured=true&limit=4'),
         ]);
 
-        if (bsRes.success) setBestSellers(bsRes.products || []);
-        if (featRes.success) setFeaturedDeals(featRes.products || []);
+        if (isMounted) {
+          if (bsRes.success) setBestSellers(bsRes.products || []);
+          if (featRes.success) setFeaturedDeals(featRes.products || []);
+        }
       } catch (err) {
         console.error('Error loading homepage products:', err);
       } finally {
-        setLoading(false);
+        if (isMounted) setLoading(false);
       }
     };
 
     loadHomeData();
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -44,13 +50,13 @@ export default function HomePage() {
       {/* 1. Hero Slideshow + Curved/Wavy SVG Ribbon Transition + Brand Pillars Strip */}
       <HeroSlider />
 
-      {/* 2. 3-Card Deals Row (GreenBasket Style: Deal of Day, Fresh Friday 20%, Weekend BOGO) */}
+      {/* 2. 3-Card Deals Row (Deal of Day, Fresh Friday 20%, Weekend BOGO) */}
       <DealsRow />
 
       {/* 3. Category Grid Showcase */}
       <CategoryGrid />
 
-      {/* 4. Best Sellers Horizontal Grid with Photography-Forward Cards & Circular '+' Buttons */}
+      {/* 4. Best Sellers Horizontal Grid with Photography-Forward Cards */}
       <section className="py-14 sm:py-16 bg-[#F8F7F4] border-t border-stone-200/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
@@ -89,7 +95,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. SIPPA-Style Interactive "Build Your Own Hamper" Module */}
+      {/* 5. Interactive "Build Your Own Hamper" Module (Code-split) */}
       <BuildYourHamper />
 
       {/* 6. Featured Promotions / Deals Grid */}
@@ -125,15 +131,12 @@ export default function HomePage() {
         </section>
       )}
 
-
-      {/* 8. Ireland Nationwide Delivery & Freshness Guarantee Banner */}
+      {/* 7. Ireland Nationwide Delivery & Freshness Guarantee Banner (Code-split) */}
       <IrelandBanner />
 
-      {/* 9. GreenBasket "Why Choose Asianmix" 5-Badge Trust Strip */}
+      {/* 8. Why Choose Asianmix Trust Strip (Code-split) */}
       <WhyChooseUs />
-
-      {/* 10. Instagram Community Feed */}
-      <SocialFeed />
     </div>
   );
 }
+

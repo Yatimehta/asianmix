@@ -30,7 +30,7 @@ const TRUST_BADGES = [
     icon: Headphones,
     title: 'Dedicated Irish Support',
     description: 'Local friendly team in Cork & Dublin ready to assist 7 days a week.',
-    color: 'text-[#2C2C2A] bg-stone-100 border-stone-200',
+    color: 'text-sky-900 bg-sky-100 border-sky-300',
   },
 ];
 

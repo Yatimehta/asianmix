@@ -16,6 +16,7 @@ import {
   Percent,
   Heart
 } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import { useAuth } from '@/context/AuthContext';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
@@ -110,33 +111,33 @@ export default function Header() {
     <>
       <header className="w-full sticky top-0 z-40 bg-white shadow-sm border-b border-stone-200/80">
         {/* Announcement Bar */}
-        <div className="bg-primary text-white text-[11px] sm:text-xs font-medium py-1.5 px-4 shadow-sm">
+        <div className="bg-[#FFBE26] text-stone-950 text-[11px] sm:text-xs font-bold py-1.5 px-4 shadow-xs border-b border-amber-300">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1 bg-white/20 text-white px-2 py-0.5 rounded text-[10px] font-bold">
-                <Truck className="w-3 h-3" /> Nationwide Ireland
+              <span className="inline-flex items-center gap-1 bg-stone-900 text-amber-300 px-2 py-0.5 rounded-full text-[10px] font-black">
+                <Truck className="w-3 h-3 text-amber-400" /> Nationwide Ireland
               </span>
               <span>
                 {amountNeededForFreeShipping > 0 ? (
                   <>
-                    Free Nationwide Delivery over <strong>€50</strong> (Add <strong>{formatEUR(amountNeededForFreeShipping)}</strong> more)
+                    Free Nationwide Delivery over <strong className="text-stone-900">€50</strong> (Add <strong className="text-emerald-900 underline">{formatEUR(amountNeededForFreeShipping)}</strong> more)
                   </>
                 ) : (
-                  <span className="font-bold text-accent-orange-light">🎉 Qualified for FREE Ireland delivery!</span>
+                  <span className="font-extrabold text-emerald-950">🎉 Qualified for FREE Ireland delivery!</span>
                 )}
               </span>
             </div>
-            <div className="hidden md:flex items-center gap-4 text-white/90 text-[11px]">
+            <div className="hidden md:flex items-center gap-4 text-stone-900 text-[11px] font-semibold">
               <button 
                 onClick={() => setLocationModalOpen(true)}
-                className="flex items-center gap-1 hover:text-accent-orange-light transition"
+                className="flex items-center gap-1 hover:text-black transition"
               >
-                <MapPin className="w-3 h-3 text-accent-orange" /> Deliver to: <span className="underline font-semibold">{deliveryLocation}</span>
+                <MapPin className="w-3 h-3 text-stone-900" /> Deliver to: <span className="underline font-bold">{deliveryLocation}</span>
               </button>
-              <span>|</span>
-              <Link href="/track-order" className="hover:text-accent-orange-light transition">Track Order</Link>
-              <Link href="/about" className="hover:text-accent-orange-light transition">About Us</Link>
-              <Link href="/contact" className="hover:text-accent-orange-light transition">Cork Depot</Link>
+              <span className="text-amber-600">|</span>
+              <Link href="/track-order" className="hover:text-black transition">Track Order</Link>
+              <Link href="/about" className="hover:text-black transition">About Us</Link>
+              <Link href="/contact" className="hover:text-black transition">Cork Depot</Link>
             </div>
           </div>
         </div>

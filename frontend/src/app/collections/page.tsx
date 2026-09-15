@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { fetchApi } from '@/lib/api';
+import { normalizeImageUrl, FALLBACK_PRODUCT_IMAGE } from '@/lib/image';
 import { Category } from '@/types';
 
 // Authentic default collections with verified Shopify CDN images
@@ -117,10 +118,11 @@ export default function CollectionsPage() {
           // Merge API data with fallback images for complete fidelity
           const merged = res.categories.map((c: Category) => {
             const fallback = FALLBACK_COLLECTIONS.find((f) => f.handle === c.slug);
+            const rawImg = c.image || fallback?.img || '';
             return {
               handle: c.slug,
               title: c.name,
-              img: c.image || fallback?.img || '',
+              img: normalizeImageUrl(rawImg),
               caption: c.description || fallback?.caption || '',
             };
           });
@@ -166,10 +168,13 @@ export default function CollectionsPage() {
               <div className="aspect-square w-full p-4 flex items-center justify-center bg-gradient-to-b from-[#FAF9F7] to-[#F2F0EC] overflow-hidden relative">
                 {col.img ? (
                   <img
-                    src={col.img}
+                    src={normalizeImageUrl(col.img)}
                     alt={col.title}
                     className="max-h-full max-w-full object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-500 ease-out"
                     loading="lazy"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = FALLBACK_PRODUCT_IMAGE;
+                    }}
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-stone-100 text-stone-400 font-bold text-xs uppercase">

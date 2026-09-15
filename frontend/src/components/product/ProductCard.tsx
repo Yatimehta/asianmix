@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import Link from 'next/link';
 import { Heart, Plus, Check, Star } from 'lucide-react';
 import { Product } from '@/types';
@@ -13,7 +13,8 @@ interface ProductCardProps {
   product: Product;
 }
 
-const getCountryFlag = (country: string): string => {
+const getCountryFlag = (country?: string): string => {
+  if (!country) return '🌏';
   const c = country.toLowerCase();
   if (c.includes('japan')) return '🇯🇵';
   if (c.includes('korea')) return '🇰🇷';
@@ -28,11 +29,12 @@ const getCountryFlag = (country: string): string => {
   return '🌏';
 };
 
-export default function ProductCard({ product }: ProductCardProps) {
+function ProductCardComponent({ product }: ProductCardProps) {
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
   const [adding, setAdding] = useState(false);
   const [added, setAdded] = useState(false);
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   const rawImage = product.images && product.images.length > 0 && product.images[0]
     ? product.images[0]
@@ -49,7 +51,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     ? product.dietaryTags.split(',').map((t) => t.trim()).filter(Boolean)
     : [];
 
-  const handleAdd = async (e: React.MouseEvent) => {
+  const handleAdd = useCallback(async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     if (adding || product.stock <= 0) return;
@@ -64,7 +66,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     } finally {
       setAdding(false);
     }
-  };
+  }, [adding, product.id, product.stock, addToCart]);
 
   const isFavorited = isInWishlist(product.id);
 
@@ -81,11 +83,15 @@ export default function ProductCard({ product }: ProductCardProps) {
             srcSet={imageSrcSet || undefined}
             sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, 240px"
             alt={product.name}
-            className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-108 transition-transform duration-500 ease-out"
+            className={`max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-108 transition-all duration-500 ease-out ${
+              imgLoaded ? 'opacity-100' : 'opacity-80 blur-[1px]'
+            }`}
             loading="lazy"
             decoding="async"
+            onLoad={() => setImgLoaded(true)}
             onError={(e) => {
               (e.currentTarget as HTMLImageElement).src = FALLBACK_PRODUCT_IMAGE;
+              setImgLoaded(true);
             }}
           />
         </Link>
@@ -103,7 +109,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="absolute top-3 left-3 flex flex-col gap-1 items-start z-20">
           <span className="inline-flex items-center gap-1 bg-white/95 backdrop-blur-md text-stone-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-xs border border-stone-200/80">
             <span>{getCountryFlag(product.originCountry)}</span>
-            <span className="hidden sm:inline">{product.originCountry}</span>
+            <span className="hidden sm:inline">{product.originCountry || 'Imported'}</span>
           </span>
 
           {discountPercent > 0 && (
@@ -132,7 +138,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <Heart className={`w-3.5 h-3.5 ${isFavorited ? 'fill-current text-brand-red-base' : ''}`} />
         </button>
 
-        {/* Out of Stock overlay (Pinwheel Red Role) */}
+        {/* Out of Stock overlay */}
         {product.stock <= 0 && (
           <div className="absolute inset-0 bg-stone-900/60 backdrop-blur-[2px] flex items-center justify-center z-30">
             <span className="bg-brand-red-base text-white text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-card">
@@ -147,7 +153,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Brand & Pack Size */}
         <div className="flex items-center justify-between text-xs text-stone-400 mb-1">
           <span className="font-extrabold uppercase tracking-wider text-[10px] text-brand-teal-dark">
-            {product.brand}
+            {product.brand || 'Asianmix'}
           </span>
           {product.weight && (
             <span className="text-[11px] font-semibold text-stone-600 bg-stone-100 px-2 py-0.5 rounded-md">
@@ -163,7 +169,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </h3>
         </Link>
 
-        {/* Dietary & Stock Badges: Active 4-Color Pinwheel Tonal Roles */}
+        {/* Dietary & Stock Badges */}
         <div className="flex items-center justify-between gap-1 my-2 flex-wrap">
           <div className="flex flex-wrap gap-1">
             {dietaryList.slice(0, 1).map((tag) => {
@@ -186,7 +192,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             })}
           </div>
 
-          {/* Stock Indicator Badge (Pinwheel Green / Yellow / Red Roles) */}
+          {/* Stock Indicator Badge */}
           {product.stock > 5 ? (
             <span className="inline-flex items-center gap-1 text-[10px] font-bold text-brand-green-dark bg-brand-green-light px-2 py-0.5 rounded-full border border-brand-green-border">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-green-base" /> In Stock
@@ -202,7 +208,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
 
-        {/* Star Rating & Review Count (Pinwheel Yellow Role) */}
+        {/* Star Rating & Review Count */}
         <div className="flex items-center gap-1.5 mb-3 text-xs text-stone-500">
           <div className="flex items-center text-brand-yellow-base">
             <Star className="w-3.5 h-3.5 fill-current" />
@@ -211,7 +217,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span className="text-stone-400">({product.reviewCount || 14})</span>
         </div>
 
-        {/* Price & Primary Active Teal Circular Add-to-Basket Button */}
+        {/* Price & Primary Circular Add-to-Basket Button */}
         <div className="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
           <div className="flex flex-col">
             <div className="flex items-baseline gap-1.5">
@@ -226,7 +232,6 @@ export default function ProductCard({ product }: ProductCardProps) {
             </div>
           </div>
 
-          {/* Circular Add-to-Cart Button in Primary Pinwheel Yellow/Amber with Dark Charcoal Icon */}
           <button
             onClick={handleAdd}
             disabled={adding || product.stock <= 0}
@@ -251,3 +256,6 @@ export default function ProductCard({ product }: ProductCardProps) {
     </div>
   );
 }
+
+const ProductCard = memo(ProductCardComponent);
+export default ProductCard;

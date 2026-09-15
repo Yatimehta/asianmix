@@ -159,19 +159,19 @@ export default function BuildYourHamper() {
         {/* 2-Column "Mix-A-Pack" Card */}
         <div className="bg-white rounded-3xl border border-stone-300/80 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
           {/* Left Lifestyle Photo Card (5 cols) */}
-          <div className="lg:col-span-5 relative bg-[#2C2C2A] text-white min-h-[320px] lg:min-h-[580px] p-8 sm:p-10 flex flex-col justify-between overflow-hidden">
+          <div className="lg:col-span-5 relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-950 text-white min-h-[320px] lg:min-h-[580px] p-8 sm:p-10 flex flex-col justify-between overflow-hidden">
             {/* Background image */}
             <img
               src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85"
               alt="Gourmet Asian Hamper"
-              className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-overlay"
+              className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-overlay"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1E] via-[#2C2C2A]/85 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-900/60 to-transparent" />
 
             {/* Top Pill */}
             <div className="relative z-10">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FFBE26] text-[#2C2C2A] font-extrabold text-xs shadow-md">
-                <Sparkles className="w-3.5 h-3.5" />
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FFBE26] text-stone-950 font-black text-xs shadow-md">
+                <Sparkles className="w-3.5 h-3.5 text-stone-900" />
                 <span>The Irish Chef&apos;s Selection</span>
               </span>
             </div>

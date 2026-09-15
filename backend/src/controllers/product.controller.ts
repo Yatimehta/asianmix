@@ -195,6 +195,23 @@ export const getProducts = async (req: Request, res: Response): Promise<void> =>
       ]);
     }
 
+const normalizeImageUrl = (src?: string | null): string => {
+  if (!src) return '';
+  let url = src.trim();
+  if (url.startsWith('//')) {
+    url = `https:${url}`;
+  }
+  url = url.replace(
+    /^(https?:\/\/)?(www\.)?asianmix\.ie\/cdn\/shop\//i,
+    'https://cdn.shopify.com/s/files/1/0582/8336/0440/'
+  );
+  url = url.replace(
+    /^\/cdn\/shop\//i,
+    'https://cdn.shopify.com/s/files/1/0582/8336/0440/'
+  );
+  return url;
+};
+
     const formattedProducts = products.map((prod) => {
       const ratings = prod.reviews.map((r) => r.rating);
       const avgRating = ratings.length ? ratings.reduce((a, b) => a + b, 0) / ratings.length : 5.0;
@@ -205,9 +222,19 @@ export const getProducts = async (req: Request, res: Response): Promise<void> =>
         parsedImages = [prod.images];
       }
 
+      const normalizedImages = (Array.isArray(parsedImages) ? parsedImages : [parsedImages])
+        .filter(Boolean)
+        .map(normalizeImageUrl);
+
       return {
         ...prod,
-        images: parsedImages,
+        images: normalizedImages,
+        category: prod.category
+          ? {
+              ...prod.category,
+              image: normalizeImageUrl(prod.category.image),
+            }
+          : undefined,
         avgRating: Number(avgRating.toFixed(1)),
         reviewCount: ratings.length,
       };

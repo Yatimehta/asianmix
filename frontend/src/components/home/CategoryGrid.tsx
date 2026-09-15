@@ -17,8 +17,8 @@ const DEFAULT_CATEGORIES = [
     description: 'Crispy banana chips, murukku, mixtures, savory & sweet crunch',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/SweetCheeda.jpg?v=1700595967',
     icon: Sparkles,
-    groupBadge: 'bg-brand-yellow-light text-brand-yellow-dark border-brand-yellow-border',
-    color: 'from-[#2C2C2A]/95 via-[#8A5800]/40 to-transparent',
+    groupBadge: 'bg-amber-100 text-amber-900 border-amber-300',
+    color: 'from-amber-950/85 via-amber-900/40 to-transparent',
   },
   {
     slug: 'spices-whole-spice-powder-and-masalas',
@@ -27,8 +27,8 @@ const DEFAULT_CATEGORIES = [
     description: 'Chilli, coriander, turmeric powder, garam masala & whole spices',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/products/IMG_E6802.jpg?v=1626047789',
     icon: Flame,
-    groupBadge: 'bg-brand-red-light text-brand-red-dark border-brand-red-border',
-    color: 'from-[#2C2C2A]/95 via-[#961B0E]/40 to-transparent',
+    groupBadge: 'bg-rose-100 text-rose-900 border-rose-300',
+    color: 'from-rose-950/85 via-rose-900/40 to-transparent',
   },
   {
     slug: 'fresh-and-frozen-vegetables',
@@ -37,8 +37,8 @@ const DEFAULT_CATEGORIES = [
     description: 'Authentic Indian gourds, okra, fresh ginger, leaves & roots',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Greenchilli.jpg?v=1701202606',
     icon: Leaf,
-    groupBadge: 'bg-brand-green-light text-brand-green-dark border-brand-green-border',
-    color: 'from-[#2C2C2A]/95 via-[#2B530E]/40 to-transparent',
+    groupBadge: 'bg-emerald-100 text-emerald-900 border-emerald-300',
+    color: 'from-emerald-950/85 via-emerald-900/40 to-transparent',
   },
   {
     slug: 'rice-and-grains',
@@ -47,8 +47,8 @@ const DEFAULT_CATEGORIES = [
     description: 'Matta rice, Basmati rice, premium Chakki fresh wheat flour',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/Pavizhammatta.jpg?v=1700683462',
     icon: Utensils,
-    groupBadge: 'bg-brand-red-light text-brand-red-dark border-brand-red-border',
-    color: 'from-[#2C2C2A]/95 via-[#961B0E]/40 to-transparent',
+    groupBadge: 'bg-amber-100 text-amber-900 border-amber-300',
+    color: 'from-orange-950/85 via-orange-900/40 to-transparent',
   },
   {
     slug: 'pickles-and-paste',
@@ -57,8 +57,8 @@ const DEFAULT_CATEGORIES = [
     description: 'Kerala mango & lime pickles, ginger-garlic pastes, chutney bases',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/IMG_6808.jpg?v=1700684129',
     icon: ShoppingBag,
-    groupBadge: 'bg-brand-teal-light text-brand-teal-dark border-brand-teal-border',
-    color: 'from-[#2C2C2A]/95 via-[#095764]/40 to-transparent',
+    groupBadge: 'bg-teal-100 text-teal-900 border-teal-300',
+    color: 'from-teal-950/85 via-teal-900/40 to-transparent',
   },
   {
     slug: 'drinks',
@@ -67,8 +67,8 @@ const DEFAULT_CATEGORIES = [
     description: 'Frooti, Maaza mango drinks, Basil seed juice & authentic milk mixes',
     image: 'https://cdn.shopify.com/s/files/1/0582/8336/0440/files/download.jpg?v=1718267006',
     icon: Coffee,
-    groupBadge: 'bg-brand-teal-light text-brand-teal-dark border-brand-teal-border',
-    color: 'from-[#2C2C2A]/95 via-[#095764]/40 to-transparent',
+    groupBadge: 'bg-cyan-100 text-cyan-900 border-cyan-300',
+    color: 'from-cyan-950/85 via-cyan-900/40 to-transparent',
   },
 ];
 

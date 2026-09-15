@@ -4,17 +4,17 @@ import { Truck, MapPin, Snowflake, Clock, CheckCircle } from 'lucide-react';
 
 export default function IrelandBanner() {
   return (
-    <section className="py-14 sm:py-16 bg-gradient-to-br from-[#2C2C2A] via-[#222220] to-[#181817] text-white relative overflow-hidden">
+    <section className="py-14 sm:py-16 bg-gradient-to-br from-[#064E3B] via-[#047857] to-[#0F766E] text-white relative overflow-hidden shadow-xl">
       {/* Decorative background ambient glows */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#FFBE26]/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-brand-teal-base/10 blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#FFBE26]/20 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-teal-400/20 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left copy */}
           <div className="lg:col-span-7 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-black text-[#FFBE26]">
-              <MapPin className="w-3.5 h-3.5 text-[#FFBE26]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs font-black text-amber-300 shadow-xs">
+              <MapPin className="w-3.5 h-3.5 text-amber-400" />
               <span>Nationwide Ireland Coverage</span>
             </div>
 

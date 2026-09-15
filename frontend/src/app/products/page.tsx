@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import ProductCard from '@/components/product/ProductCard';
 import { fetchApi } from '@/lib/api';
+import { normalizeImageUrl, FALLBACK_PRODUCT_IMAGE } from '@/lib/image';
 import { Product, Category } from '@/types';
 
 const CATEGORIES_LIST = [
@@ -257,9 +258,12 @@ function ProductCatalogContent() {
                   {activeCat.image && (
                     <div className="w-32 h-32 sm:w-44 sm:h-44 bg-white/10 backdrop-blur-md rounded-2xl p-4 flex items-center justify-center shrink-0 border border-white/20 shadow-inner">
                       <img
-                        src={activeCat.image}
+                        src={normalizeImageUrl(activeCat.image)}
                         alt={activeCat.name}
                         className="max-h-full max-w-full object-contain filter drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = FALLBACK_PRODUCT_IMAGE;
+                        }}
                       />
                     </div>
                   )}
